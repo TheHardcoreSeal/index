@@ -1,0 +1,24 @@
+.Searchbar {
+    position: absolute;
+    top: 25px;
+    margin-left: 65px;
+    background-color: transparent;
+    color: white;
+    border-radius: 15px;
+    border-color: gray;
+    border-width: 3px;
+    border-style: solid;        
+}
+#facebookLogoButton {
+    background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' );
+    background-size: 50px 50px;
+    background-color: transparent;
+    height: 50px;  
+    width: 50px;
+    padding: 0;
+    border: none;
+}
+.navBarTop s {
+    float: right;
+    background-image: url(Logos\Settings.png);
+}

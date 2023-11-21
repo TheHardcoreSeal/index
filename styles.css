@@ -24,7 +24,7 @@ body{
 
 .Searchbar {
     width: 220px;
-    height: 35px;
+    height: 30px;
     padding-left: 30px; /* make room for the icon */
     background-color: #3A3B3C;
     border-radius: 5vw;
@@ -57,10 +57,6 @@ body{
 }
 
 @media screen and (max-width: 1000px) {
-    .search-container::before {
-        /*nothing*/
-    }
-  
     .Searchbar {
         width: 10px;
         height: 40px;

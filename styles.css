@@ -1,23 +1,95 @@
-.Searchbar {
-    position: absolute;
-    top: 25px;
-    margin-left: 65px;
-    background-color: transparent;
-    color: white;
-    border-radius: 15px;
-    border-color: gray;
-    border-width: 3px;
-    border-style: solid;        
+body{
+    font-family: "Segoe UI";
+    background-color: #18191A;
+    margin: 0;
 }
+
+.header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-color: #242526;
+    height: 60px;
+}
+
+.Searchbar::placeholder{
+    color: #B2B2B2;
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.Searchbar {
+    width: 220px;
+    height: 35px;
+    padding-left: 30px; /* make room for the icon */
+    background-color: #3A3B3C;
+    border-radius: 5vw;
+    border: 2px solid #3A3B3C;
+    outline: none;
+    color: #B2B2B2;
+}
+
+.search-container::before {
+    content: '\f002'; /* Unicode for the Font Awesome search icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 10px; /* Adjust as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #B2B2B2;
+}
+
 #facebookLogoButton {
-    background-image: url( 'https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png' );
-    background-size: 50px 50px;
+    margin-left: 10px;
+    float: left;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png');
+    background-size: 45px 45px; 
     background-color: transparent;
-    height: 50px;  
-    width: 50px;
+    height: 45px; 
+    width: 45px; 
     padding: 0;
     border: none;
 }
+
+@media screen and (max-width: 1000px) {
+    .search-container::before {
+        /*nothing*/
+    }
+  
+    .Searchbar {
+        width: 10px;
+        height: 40px;
+        padding-left: 30px; /* make room for the icon */
+        background-color: #3A3B3C;
+        border-radius: 5vw;
+        border: 2px solid #3A3B3C;
+        outline: none;
+        color: #B2B2B2;
+    }
+
+    .Searchbar::placeholder{
+        color: #3A3B3C;
+    }
+
+    .search-container::before {
+        content: '\f002'; /* Unicode for the Font Awesome search icon */
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        left: 10px; /* Adjust as needed */
+        top: 50%;
+        transform: translateY(-50%);
+        color: #B2B2B2;
+        padding-left: 5px;
+    }
+    
+}
+
 .navBarTop s {
     float: right;
     background-image: url(Logos\Settings.png);

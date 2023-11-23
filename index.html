@@ -73,7 +73,7 @@
 <!--Left Side Panel v----------------------------------------------------------------------------------------------------->
 
         <div class = "leftSideBar">
-            <div class = "tab-switch">
+            <div class = "tab-switch fixed-child">
                 <div class="tab-buttons button-class underline"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;color:#0866FF;">Links</p></div>
                 <div class="tab-buttons button-class"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500;">Discovery Hub</p></div>
             </div>
@@ -105,17 +105,69 @@
 
             <div style="display: flex;justify-content: left;align-items:center;">
                 <p style="margin:0; margin-top: 10px; font-size: xx-large; font-weight:bolder;">Shortcuts</p>
-                <i class="fa-solid fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="shortcutsClick()"></i>
+                <i id = "shortcutArrow" class="fa-solid fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="shortcutsClick()"></i>
             </div>
 
-            <div style="display: flex; justify-content: left; align-items: center;">
+            <div id = "shortcutClickDiv" style="display: flex;justify-content: left;">
+            </div>
+
+            <div style="display: flex; justify-content: left; align-items:center ;">
                 <p style="margin: 0; margin-top: 10px; font-size: xx-large; font-weight: bolder;">Explore</p>
-                <i class="fas fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="exploreClick()"></i>
+                <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="exploreClick()"></i>
             </div>
-            
 
+            <div id = "exploreClickDiv" style="visibility: hidden;">
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Memories</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-bookmark" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 18px;">Saved</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-flag" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 14px;">Pages</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-calendar-check" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 14px;">Events</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-chart-line" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Ads Manager</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-earth-americas" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Climate Science</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-shield-heart" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Fundraisers</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-brands fa-meta" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Meta Quest</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                    <i class="fa-solid fa-gamepad" style="color: #434445;"></i>
+                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Gaming</p>
+                </div>
+
+                <div class = "link-buttons-unclickable">
+                </div>
+            </div>
         </div>
 
+        <script src="script.js"></script>
     </body>
 
 </html>

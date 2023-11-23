@@ -96,7 +96,7 @@ body {
 }
 
 .Searchbar::placeholder {
-    color: #B2B2B2;
+    color: #656668;
 }
 
 .search-container {
@@ -106,7 +106,7 @@ body {
 }
 
 .Searchbar {
-    width: 220px;
+    width: 200px;
     height: 30px;
     padding-left: 30px;
     background-color: #3A3B3C;
@@ -157,17 +157,32 @@ body {
     top: 60px;
     left: 0;
     width: 280px;
-    height: 100vh;
+    max-height: 100vh;
     background-color: #242526;
     color: #fff;
     padding: 10px;
-    overflow-y: hidden;
+    padding-top: 0;
+    overflow-y: auto;
+
+    scrollbar-width:thin;
+    scrollbar-color: #38393a #242526;
 }
 
+.leftSideBar::-webkit-scrollbar {
+    width: 0px;
+}
 
   .leftSideBar:first-child{
-    justify-content: center;
+    margin-top: 0px;
+    justify-content: center;    
+    position: fixed;
   }
+
+  .leftSideBar .fixed-child {
+    position: sticky;
+    top: 0px; 
+    background-color: #242526;
+}
 
   .tab-switch {
     display: flex;
@@ -204,6 +219,15 @@ body {
     border-radius: 8%;
 }
 
+.link-buttons-unclickable{
+    height: 60px;
+    display: flex;
+    padding-left: 5px;
+    justify-content: left;
+    align-items: center;
+    font-size:xx-large;
+    border-radius: 8%;
+}
 
 .link-buttons:hover{
     background-color: #434445;

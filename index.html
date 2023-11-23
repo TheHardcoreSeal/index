@@ -3,20 +3,119 @@
     <head>
         <title>Facebook</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <script src="https://kit.fontawesome.com/e9348bb64a.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-        <div class = "header"> <!-- make seperate divs for each element in header, and put all style elements in css-->
-            <div>
-                <button id="facebookLogoButton"></button>
+
+        <!--Header v----------------------------------------------------------------------------------------------------->
+
+        <div class = "header">
+            <div class = "left-side">
+                <div>
+                    <button id="facebookLogoButton" onclick="homeClick()">
+                        <i class="fa-brands fa-facebook fa-2xl" style="color: #0866ff;"></i>
+                      </button>
+                </div>
+                <form class = "search-container">
+                    <input type="text" placeholder="Search Facebook" class="Searchbar">
+                </form>  
             </div>
-            <form class = "search-container">
-                <input type="text" placeholder="Search Facebook" class="Searchbar">
-            </form>  
+
+            <div class = "center-side">
+                <div class="center-buttons button-class" onclick="marketplaceClick()">
+                    <i class="fa-solid fa-store fa-xl" style="color: #ffffff;"></i>
+                    <p style="font-size: 24px !important; margin-left: 10px;">Marketplace</p>
+                </div>
+
+                <div class="vertical-line"></div>
+                
+                <div class = "center-buttons button-class" onclick="videoClick()">
+                    <i class="fa-solid fa-video fa-2xl" style="color: #ffffff;"></i>
+                    <p style="font-size: 24px; margin-left: 10px;">Video</p>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div class = "center-buttons button-class underline" onclick="homeClick()">
+                    <i class="fa-solid fa-house fa-2xl" style="color: #0866FF;"></i>
+                    <p style="color: #0866FF; font-size: 24px; margin-left: 10px;">Home</p>
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <div class = "center-buttons button-class" onclick="creatPostClick()">
+                    <i class="fa-solid fa-circle-plus fa-2xl" style="color: #ffffff;"></i>
+                    <p style="font-size: 24px; margin-left: 10px;">Create</p>
+                </div>
+            </div>
+
+            <div class = "right-side">
+                <div class="icon-background button-class" onclick="settingsClick()">
+                    <i class="fa-solid fa-gear fa-2xl " style="color: #ffffff;"></i>
+                </div>
+
+                <div class="icon-background button-class" onclick="userClick()">
+                    <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+                </div>
+
+                <div class="icon-background button-class" onclick="notificationClick()">
+                    <i class="fa-solid fa-bell fa-2xl" style="color: #ffffff;"></i>
+                </div>
+
+                <div class="icon-background button-class"onclick="messengerClick()">
+                    <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #ffffff;"></i>
+                </div>
+            </div>
         </div>   
 
-        
+<!--Left Side Panel v----------------------------------------------------------------------------------------------------->
+
+        <div class = "leftSideBar">
+            <div class = "tab-switch">
+                <div class="tab-buttons button-class underline"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;color:#0866FF;">Links</p></div>
+                <div class="tab-buttons button-class"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500;">Discovery Hub</p></div>
+            </div>
+    
+            <div class = "link-buttons button-class" onclick="userClick()">
+                <i class="fa-solid fa-user" style="color: #b2b2b2; padding-left: 5px;"></i>
+                <p style="font-size: x-large; margin-left: 15px;">User</p>
+            </div>
+
+            <div class = "link-buttons button-class" onclick="friendsClick()">
+                <i class="fa-solid fa-user-group" style="color: #b2b2b2;"></i>
+                <p style="font-size: x-large; margin-left: 10px;">Friends</p>
+            </div>
+
+            <div class = "link-buttons button-class" onclick="marketplaceClick()">
+                <i class="fa-solid fa-store" style="color: #b2b2b2;"></i>
+                <p style="font-size: x-large; margin-left: 15px;">Marketplace</p>
+            </div>
+
+            <div class = "link-buttons button-class" onclick="videoClick()">
+                <i class="fa-solid fa-video" style="color: #b2b2b2;"></i>
+                <p style="font-size: x-large; margin-left: 15px;">Video</p>
+            </div>
+
+            <div class = "link-buttons button-class" onclick="messengerClick()">
+                <i class="fa-brands fa-facebook-messenger" style="color: #b2b2b2;"></i>
+                <p style="font-size: x-large; margin-left: 18px;">Messenger</p>
+            </div>
+
+            <div style="display: flex;justify-content: left;align-items:center;">
+                <p style="margin:0; margin-top: 10px; font-size: xx-large; font-weight:bolder;">Shortcuts</p>
+                <i class="fa-solid fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="shortcutsClick()"></i>
+            </div>
+
+            <div style="display: flex; justify-content: left; align-items: center;">
+                <p style="margin: 0; margin-top: 10px; font-size: xx-large; font-weight: bolder;">Explore</p>
+                <i class="fas fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="shortcutsClick()"></i>
+            </div>
+            
+
+        </div>
+
     </body>
 
 </html>

@@ -1,18 +1,101 @@
-body{
+body {
     font-family: "Segoe UI";
     background-color: #18191A;
     margin: 0;
 }
 
 .header {
+    position: fixed;
     margin: 0;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: #242526;
     height: 60px;
 }
 
-.Searchbar::placeholder{
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.center-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-buttons {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: larger;
+    color: #fff;
+    height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10%;
+}
+
+.center-buttons:hover{
+    background-color: #434445;
+}
+
+.underline {
+    position: relative;
+}
+
+.underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0866FF;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+.underline::after {
+    transform: scaleX(1);
+}
+
+.vertical-line {
+    height: 40px;
+    width: 1px;
+    background-color: #434445;
+}
+
+.right-side {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.button-class {
+    cursor: pointer;
+}
+
+.icon-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #3A3B3C;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-size: large;
+}
+
+.icon-background:hover{
+    background-color: #434445;
+}
+
+.Searchbar::placeholder {
     color: #B2B2B2;
 }
 
@@ -25,7 +108,7 @@ body{
 .Searchbar {
     width: 220px;
     height: 30px;
-    padding-left: 30px; /* make room for the icon */
+    padding-left: 30px;
     background-color: #3A3B3C;
     border-radius: 5vw;
     border: 2px solid #3A3B3C;
@@ -34,59 +117,105 @@ body{
 }
 
 .search-container::before {
-    content: '\f002'; /* Unicode for the Font Awesome search icon */
+    content: '\f002';
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     position: absolute;
-    left: 10px; /* Adjust as needed */
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: #B2B2B2;
 }
 
 #facebookLogoButton {
+    cursor: pointer;
     margin-left: 10px;
     float: left;
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png');
-    background-size: 45px 45px; 
-    background-color: transparent;
-    height: 45px; 
-    width: 45px; 
+    background-color: white;
+    height: 45px;
+    width: 45px;
     padding: 0;
-    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
 }
 
-@media screen and (max-width: 1000px) {
-    .Searchbar {
-        width: 10px;
-        height: 40px;
-        padding-left: 30px; /* make room for the icon */
-        background-color: #3A3B3C;
-        border-radius: 5vw;
-        border: 2px solid #3A3B3C;
-        outline: none;
-        color: #B2B2B2;
-    }
-
-    .Searchbar::placeholder{
-        color: #3A3B3C;
-    }
-
-    .search-container::before {
-        content: '\f002'; /* Unicode for the Font Awesome search icon */
-        font-family: 'Font Awesome 5 Free';
-        font-weight: 900;
-        position: absolute;
-        left: 10px; /* Adjust as needed */
-        top: 50%;
-        transform: translateY(-50%);
-        color: #B2B2B2;
-        padding-left: 5px;
-    }
-    
+#facebookLogoButton i {
+    margin: 0;
 }
 
-.navBarTop s {
-    float: right;
-    background-image: url(Logos\Settings.png);
+
+.leftSideBar {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    align-content: start;
+    align-items: start;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #242526;
+    color: #fff;
+    padding: 10px;
+    overflow-y: hidden;
 }
+
+
+  .leftSideBar:first-child{
+    justify-content: center;
+  }
+
+  .tab-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    border-bottom: 1px solid #3A3B3C;
+    margin-bottom: 10px;
+}
+
+.tab-buttons {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 22px;
+    padding-right: 22px;
+    margin-left: 10px;
+    border-radius: 7%;
+    height: 50px;
+}
+
+.tab-buttons:hover{
+    background-color: #434445;
+}
+
+.link-buttons{
+    height: 60px;
+    display: flex;
+    padding-left: 5px;
+    justify-content: left;
+    align-items: center;
+    font-size:xx-large;
+    border-radius: 8%;
+}
+
+
+.link-buttons:hover{
+    background-color: #434445;
+}
+
+.rotate-class {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rotate-class:hover {
+    transform: rotate(90deg);
+    color: #0866FF;
+}
+
+

@@ -1,4 +1,10 @@
 var exploreVisible = false;
+var groupVisible = false;
+var friendsVisible = false;
+var eventsVisible = false;
+var pagesVisible = false;
+var suggestedVisible = false;
+var birthdaysVisible = false;
 
 $( function() {
     $( "#sortable" ).sortable({
@@ -11,10 +17,30 @@ $( function() {
                 $(this).width($(this).width());
             });
             return ui.clone().addClass('drag-panels-helper');
+        },
+        update: function(event, ui) {
+            var sortedIDs = $( "#sortable" ).sortable( "toArray" );
+            sortedIDs.forEach(function(id, index) {
+                var element = $('#side2').find('#' + id);
+                $('#side2').append(element);
+            });
         }
     });
     $( "#sortable" ).disableSelection();
+
+    // Add change event listener to checkboxes
+    $( "#sortable input[type='checkbox']" ).change(function() {
+        var id = $(this).closest('div').attr('id');
+        var isChecked = $(this).is(':checked');
+        if (isChecked) {
+            $('#side2').find('#' + id).show();
+        } else {
+            $('#side2').find('#' + id).hide();
+        }
+    });
 } );
+
+
 
 function xPanelClick(){
     document.getElementById('overlay').style.visibility = 'hidden';
@@ -108,40 +134,7 @@ function showFloatingPanel() {
 // Function to hide the floating panel
 function hideFloatingPanel() {
     const floatingPanel = document.getElementById('floatingPanel');
+    document.getElementById('user-text').value = ""
+
     floatingPanel.classList.remove('show');
 }
-    
-// Function to handle audience selection
-document.querySelectorAll('.audience-panel a').forEach(audienceOption => {
-    audienceOption.addEventListener('click', function(e) {
-        e.preventDefault();
-        const selectedAudience = this.getAttribute('data-audience');
-        document.querySelector('.dropdown-btn').textContent = `${selectedAudience}` + '  ';
-        
-        const icon = document.createElement('i');
-        icon.classList.add('fa-solid', 'fa-play', 'fa-rotate-90');
-        icon.style.color = '#ffffff';
-  
-        document.querySelector('.dropdown-btn').appendChild(icon);
-        document.querySelector('.audience-page').style.display = 'none';
-        document.querySelector('.main-page').style.display = 'block';
-    });
-});
-
-// Function to handle audience button click
-document.querySelector('.dropdown-btn').addEventListener('click', function() {
-    var audiencePage = document.querySelector('.audience-page');
-    var mainPage = document.querySelector('.main-page');
-
-    audiencePage.style.display = 'block';
-    mainPage.style.display = 'none';
-});
-
-// Functionality for back button
-document.querySelector('.back-btn').addEventListener('click', function() {
-    var audiencePage = document.querySelector('.audience-page');
-    var mainPage = document.querySelector('.main-page');
-
-    audiencePage.style.display = 'none';
-    mainPage.style.display = 'block';
-});

@@ -46,7 +46,7 @@
 
                 <div class="vertical-line"></div>
 
-                <div class = "center-buttons button-class" onclick="creatPostClick()">
+                <div class = "center-buttons button-class" onclick="showFloatingPanel()">
                     <i class="fa-solid fa-circle-plus fa-2xl" style="color: #ffffff;"></i>
                     <p style="font-size: 24px; margin-left: 10px;">Create</p>
                 </div>
@@ -169,18 +169,16 @@
         </div>
 
         <div id = "side2" class = "leftSideBar2" style="visibility: hidden;">
-            <div class = "tab-switch fixed-child">
+            <div id = "nonSortable" class = "tab-switch fixed-child">
                 <div class="tab-buttons button-class"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;">Links</p></div>
                 <div class="tab-buttons button-class underline"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500; color:#0866FF;">Discovery Hub</p></div>
             </div>
-
-
-            <div class = "discoveryPanels button-class link-buttons" onclick="editPanelsClick()">
+            <div  id = "nonSortable" class = "discoveryPanels button-class link-buttons" onclick="editPanelsClick()">
                 <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
                 <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Edit Panels</p>
             </div>
 
-            <div class = "discoveryPanels">
+            <div  id="friendsOnline" class = "discoveryPanels">
                 <div class="inner-content">
                     <div class = "discovery-title">
                         <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Friends Online</p>
@@ -189,7 +187,7 @@
                 </div>
             </div>
 
-            <div class = "discoveryPanels">
+            <div id="events" class = "discoveryPanels">
                 <div class="inner-content">
                     <div class = "discovery-title">
                         <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Events</p>
@@ -198,7 +196,7 @@
                 </div>
             </div>
 
-            <div class = "discoveryPanels">
+            <div id="pages" class = "discoveryPanels">
                 <div class="inner-content">
                     <div class = "discovery-title">
                         <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Pages</p>
@@ -207,7 +205,7 @@
                 </div>
             </div>
 
-            <div class = "discoveryPanels">
+            <div id="suggested" class = "discoveryPanels">
                 <div class="inner-content">
                     <div class = "discovery-title">
                         <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Suggested</p>
@@ -215,7 +213,27 @@
                     </div>
                 </div>
             </div>
+
+            <div id="birthdays" class = "discoveryPanels">
+                <div class="inner-content">
+                    <div class = "discovery-title">
+                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Birthdays</p>
+                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 137px;" onclick=""></i>
+                    </div>
+                </div>
+            </div>
+
+            <div id="groupConversations" class = "discoveryPanels">
+                <div class="inner-content">
+                    <div class = "discovery-title">
+                        <p style="color: #FFFFFF; white-space: nowrap; font-size: x-large; margin-left: 10px;">Group Conversations</p>
+                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 18px;" onclick=""></i>
+                    </div>
+                </div>
+            </div>
         </div>
+
+
 
         <div id ="overlay" class="overlay" style="visibility: hidden;">
             <div id = "sortable" class="overlay-content">
@@ -228,7 +246,7 @@
 
                 <div id="friendsOnline" class ="drag-panels" style="margin-bottom: 5px;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <p style="margin-left: 10px; user-select: none;">Friends Online</p>
                     </label>
                     <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 115px;"></i>
@@ -236,7 +254,7 @@
 
                 <div id="events" class ="drag-panels" style="margin-bottom: 5px;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <p style="margin-left: 10px; user-select: none;">Events</p>
                     </label>
                     <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 180px;"></i>
@@ -244,7 +262,7 @@
 
                 <div id="pages" class ="drag-panels" style="margin-bottom: 5px;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <p style="margin-left: 10px; user-select: none;">Pages</p>
                     </label>
                     <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 185px;"></i>
@@ -252,7 +270,7 @@
 
                 <div id="suggested" class ="drag-panels" style="margin-bottom: 5px;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <p style="margin-left: 10px; user-select: none;">Suggested</p>
                     </label>
                     <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 146px;"></i>
@@ -260,7 +278,7 @@
 
                 <div id="birthdays" class ="drag-panels" style="margin-bottom: 5px;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <p style="margin-left: 10px; user-select: none;">Birthdays</p>
                     </label>
                     <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 156px;"></i>
@@ -268,7 +286,7 @@
 
                 <div id="groupConversations" class ="drag-panels" style="margin-bottom: 5px;">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                         <p style="margin-left: 10px; user-select: none;">Group Conversations</p>
                     </label>
                     <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 62px;"></i>
@@ -277,24 +295,24 @@
             </div>
           </div>
 
-          <!----right side --->
+          <!----Main feed --->
         <div class="content-area" id="mainContent">
             <section>
           
                 <div class="create-post">
-                  <i id="profile-picture" class="fa-solid fa-circle-user" style="color: #005eff;"></i>
+                  <i onclick="userClick()" id="profile-picture" class=" button-class fa-solid fa-circle-user"></i>
                   <div class="create-post-content">
                     <button id="postContent" class="text-area-button" onclick="showFloatingPanel()" placeholder="What's on your mind, User?" aria-label="Write a post">What's on your mind, User?</button>
                     </div>
                   <hr class="create-post-hr">
           
                   <div class="buttons-container">
-                  <button>
+                  <button onclick="showFloatingPanel()">
                     <i class="fa-solid fa-video" style="color: #b2b3b4; font-size: 30px"></i>
                     <span style="margin-left: 5px; margin-top: -20px">Live Video</span>
                   </button>
           
-                  <button>
+                  <button onclick="showFloatingPanel()">
                     <i class="fa-solid fa-circle-play" style="color: #b2b3b4; font-size: 30px"></i>
                     <span style="margin-left: 5px;">Stories</span>
                   </button>
@@ -305,7 +323,7 @@
                     <span style="margin-left: 5px;">Photo/video</span>
                   </button>
           
-                  <button>
+                  <button onclick="showFloatingPanel()">
                     <i class="fa-regular fa-face-smile" style="color: #b2b3b4; font-size: 30px"></i>
                     <span style="margin-left: 5px;">Feeling/activity</span>
                   </button>
@@ -317,7 +335,7 @@
                     <div class="create-post-panel">
                         <div class="panel-header">
                             <p class="create-post-header">Create post</p>
-                            <button onclick="hideFloatingPanel()" class="close-button">X</button>
+                            <button onclick="hideFloatingPanel()" class="close-button button-class">X</button>
                         </div>
                         <hr class="line-divider">
                         <div class="content">
@@ -329,19 +347,18 @@
                                     <a href="#" data-audience="Only Me"><i class="fa-solid fa-lock" style="color: #ffffff;"></i> Only Me</a>   
                                 </div>
                             </div>
+
                             <div class="main-page"> 
-                                <i id="profile-picture" class="fa-solid fa-circle-user" style="color: #005eff;"></i>
+                                <i id="profile-picture" class="button-class fa-solid fa-circle-user"></i>
                                 <div class="user-info">
                                     <span class="username">Username</span>
-                                    <button class="dropdown-btn"><i class="fa-solid fa-earth-americas" style="color: #ffffff;"></i> Public <i class="fa-solid fa-play fa-rotate-90" style="color: #ffffff;"></i></button>
+                                    <button class="dropdown-btn">
+                                        <i class="fa-solid fa-earth-americas" style="color: #8e8e8e; font-size: x-small; padding-right: 10px;"></i>Public<i class="fa-solid fa-play fa-rotate-90 fa-2xs" style="margin-left: 10px; font-size: xx-small; color: #8e8e8e;"></i>
+                                    </button>
                                 </div>
-                                <textarea class="post-text" placeholder="What's on your mind, User?"></textarea>
+                                <textarea id ="user-text" class="post-text" placeholder="What's on your mind, User?"></textarea>
                                 <div class="actions">
-                                    <div class="icons">
-                                        <i class="far fa-image"></i>
-                                        <i class="far fa-smile"></i>
-                                    </div>
-                                    <button class="post-btn">Post</button>
+                                    <button onclick="hideFloatingPanel()" class="button-class post-btn">Post</button>
                                 </div>
                             </div>
                         </div>

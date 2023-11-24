@@ -92,3 +92,56 @@ function linksClick()
 
     container2.style.visibility = 'hidden';
 }
+
+// Function to show the floating panel
+function showFloatingPanel() {
+    const floatingPanel = document.getElementById('floatingPanel');
+    floatingPanel.classList.add('show');
+    
+    var audiencePage = document.querySelector('.audience-page');
+    var mainPage = document.querySelector('.main-page');
+
+    audiencePage.style.display = 'none';
+    mainPage.style.display = 'block';
+}
+
+// Function to hide the floating panel
+function hideFloatingPanel() {
+    const floatingPanel = document.getElementById('floatingPanel');
+    floatingPanel.classList.remove('show');
+}
+    
+// Function to handle audience selection
+document.querySelectorAll('.audience-panel a').forEach(audienceOption => {
+    audienceOption.addEventListener('click', function(e) {
+        e.preventDefault();
+        const selectedAudience = this.getAttribute('data-audience');
+        document.querySelector('.dropdown-btn').textContent = `${selectedAudience}` + '  ';
+        
+        const icon = document.createElement('i');
+        icon.classList.add('fa-solid', 'fa-play', 'fa-rotate-90');
+        icon.style.color = '#ffffff';
+  
+        document.querySelector('.dropdown-btn').appendChild(icon);
+        document.querySelector('.audience-page').style.display = 'none';
+        document.querySelector('.main-page').style.display = 'block';
+    });
+});
+
+// Function to handle audience button click
+document.querySelector('.dropdown-btn').addEventListener('click', function() {
+    var audiencePage = document.querySelector('.audience-page');
+    var mainPage = document.querySelector('.main-page');
+
+    audiencePage.style.display = 'block';
+    mainPage.style.display = 'none';
+});
+
+// Functionality for back button
+document.querySelector('.back-btn').addEventListener('click', function() {
+    var audiencePage = document.querySelector('.audience-page');
+    var mainPage = document.querySelector('.main-page');
+
+    audiencePage.style.display = 'none';
+    mainPage.style.display = 'block';
+});

@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
         <script src="https://kit.fontawesome.com/e9348bb64a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     </head>
 
     <body>
@@ -72,7 +73,7 @@
 
 <!--Left Side Panel v----------------------------------------------------------------------------------------------------->
 
-        <div class = "leftSideBar">
+        <div id = "side1" class = "leftSideBar" style="visibility: visible;">
             <div class = "tab-switch fixed-child">
                 <div class="tab-buttons button-class underline"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;color:#0866FF;">Links</p></div>
                 <div class="tab-buttons button-class"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500;">Discovery Hub</p></div>
@@ -167,6 +168,116 @@
             </div>
         </div>
 
+        <div id = "side2" class = "leftSideBar2" style="visibility: hidden;">
+            <div class = "tab-switch fixed-child">
+                <div class="tab-buttons button-class"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;">Links</p></div>
+                <div class="tab-buttons button-class underline"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500; color:#0866FF;">Discovery Hub</p></div>
+            </div>
+
+
+            <div class = "discoveryPanels button-class link-buttons" onclick="editPanelsClick()">
+                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+                <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Edit Panels</p>
+            </div>
+
+            <div class = "discoveryPanels">
+                <div class="inner-content">
+                    <div class = "discovery-title">
+                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Friends Online</p>
+                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 80px;" onclick=""></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "discoveryPanels">
+                <div class="inner-content">
+                    <div class = "discovery-title">
+                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Events</p>
+                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 165px;" onclick=""></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "discoveryPanels">
+                <div class="inner-content">
+                    <div class = "discovery-title">
+                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Pages</p>
+                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 171px;" onclick=""></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "discoveryPanels">
+                <div class="inner-content">
+                    <div class = "discovery-title">
+                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Suggested</p>
+                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 122px;" onclick=""></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id ="overlay" class="overlay" style="visibility: hidden;">
+            <div id = "sortable" class="overlay-content">
+                <div id ="nonSortable"class="panel-top">
+                    <div class="x-background button-class" style="margin-left: 10px; margin-right: 40px;" onclick="xPanelClick()">
+                        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                    </div>
+                  <p style="margin: 0; font-weight: 500; color:white; font-size: x-large;">Panel Editor</p>
+                </div>
+
+                <div id="friendsOnline" class ="drag-panels" style="margin-bottom: 5px;">
+                    <label>
+                        <input type="checkbox">
+                        <p style="margin-left: 10px; user-select: none;">Friends Online</p>
+                    </label>
+                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 115px;"></i>
+                </div>
+
+                <div id="events" class ="drag-panels" style="margin-bottom: 5px;">
+                    <label>
+                        <input type="checkbox">
+                        <p style="margin-left: 10px; user-select: none;">Events</p>
+                    </label>
+                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 180px;"></i>
+                </div>
+
+                <div id="pages" class ="drag-panels" style="margin-bottom: 5px;">
+                    <label>
+                        <input type="checkbox">
+                        <p style="margin-left: 10px; user-select: none;">Pages</p>
+                    </label>
+                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 185px;"></i>
+                </div>
+
+                <div id="suggested" class ="drag-panels" style="margin-bottom: 5px;">
+                    <label>
+                        <input type="checkbox">
+                        <p style="margin-left: 10px; user-select: none;">Suggested</p>
+                    </label>
+                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 146px;"></i>
+                </div>
+
+                <div id="birthdays" class ="drag-panels" style="margin-bottom: 5px;">
+                    <label>
+                        <input type="checkbox">
+                        <p style="margin-left: 10px; user-select: none;">Birthdays</p>
+                    </label>
+                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 156px;"></i>
+                </div>
+
+                <div id="groupConversations" class ="drag-panels" style="margin-bottom: 5px;">
+                    <label>
+                        <input type="checkbox">
+                        <p style="margin-left: 10px; user-select: none;">Group Conversations</p>
+                    </label>
+                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 62px;"></i>
+                </div>
+
+            </div>
+          </div>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script src="script.js"></script>
     </body>
 

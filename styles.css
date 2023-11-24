@@ -79,6 +79,18 @@ body {
     cursor: pointer;
 }
 
+.x-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: #3A3B3C;
+    border-radius: 50%;
+    margin-right: 8px;
+    font-size: large;
+}
+
 .icon-background {
     display: flex;
     justify-content: center;
@@ -157,7 +169,7 @@ body {
     top: 60px;
     left: 0;
     width: 280px;
-    max-height: 100vh;
+    height: 100vh;
     background-color: #242526;
     color: #fff;
     padding: 10px;
@@ -183,6 +195,45 @@ body {
     top: 0px; 
     background-color: #242526;
 }
+
+
+.leftSideBar2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    align-content: start;
+    align-items: start;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background-color: #242526;
+    color: #fff;
+    padding: 10px;
+    padding-top: 0;
+    overflow-y: auto;
+
+    scrollbar-width:thin;
+    scrollbar-color: #38393a #242526;
+}
+
+.leftSideBar2::-webkit-scrollbar {
+    width: 0px;
+}
+
+  .leftSideBar2:first-child{
+    margin-top: 0px;
+    justify-content: center;    
+    position: fixed;
+  }
+
+  .leftSideBar2 .fixed-child {
+    position: sticky;
+    top: 0px; 
+    background-color: #242526;
+}
+
 
   .tab-switch {
     display: flex;
@@ -242,4 +293,103 @@ body {
     color: #0866FF;
 }
 
+.discoveryPanels{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #3A3B3C;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    min-height: 60px;
+    padding-left: 5px;
+    justify-content: left;
+    font-size:x-large;
+}
+
+.discovery-title{
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    justify-content: left;
+    font-size:x-large;
+}
+
+.inner-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: left;
+    align-items:start ;
+    margin-top: 60px;
+    z-index: 9999;
+  }
+
+  .overlay-content {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 326px;
+    background-color: #242526;
+    border-radius: 2%;
+  }
+
+  .panel-top{
+    display: flex;
+    justify-content: left;
+    background-color: #242526;
+    border-radius: 2%;
+    border-bottom: 1px solid #3A3B3C;
+    padding-bottom: 8px;
+  }
+
+.drag-panels {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      margin: 0;
+      background-color: #3A3B3C;
+    }
+
+.drag-panels-helper{
+    opacity: 0.5;
+}
+
+    input[type="checkbox"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: 1px solid #ccc;
+        height: 20px;
+        width: 20px;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        margin-right: 5px; /* Add some spacing between checkbox and text */
+      }
+  
+      input[type="checkbox"]:checked {
+        background-color: #0866FF;
+        border: 1px solid #0866FF;
+      }
+  
+      label {
+        display: inline-flex;
+        align-items: center;
+        font-family: 'Segoe UI';
+        font-weight: 500;
+        font-size: large;
+        color: #FFFFFF;
+        cursor: pointer;
+        white-space: nowrap;
+        padding-left: 5px;
+      }
+  
 

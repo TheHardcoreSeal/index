@@ -170,7 +170,7 @@ body {
     top: 60px;
     left: 0;
     width: 280px;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background-color: #242526;
     color: #fff;
     padding: 10px;
@@ -208,7 +208,7 @@ body {
     top: 60px;
     left: 0;
     width: 280px;
-    height: 100vh;
+    height: calc(100vh - 60px);
     background-color: #242526;
     color: #fff;
     padding: 10px;
@@ -243,6 +243,7 @@ body {
     height: 80px;
     border-bottom: 1px solid #3A3B3C;
     margin-bottom: 10px;
+    z-index: 2;
 }
 
 .tab-buttons {
@@ -298,11 +299,8 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #3A3B3C;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    height: 45px;
     padding-left: 5px;
-    justify-content: left;
+    justify-content: flex-start;
     font-size:x-large;
 }
 
@@ -320,7 +318,7 @@ body {
 }
 
 .overlay {
-    position: fixed; /* Change from absolute to fixed */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -363,35 +361,139 @@ body {
     opacity: 0.5;
 }
 
-    input[type="checkbox"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: 1px solid #ccc;
-        height: 20px;
-        width: 20px;
-        border-radius: 4px;
-        outline: none;
-        cursor: pointer;
-        margin-right: 5px; /* Add some spacing between checkbox and text */
-      }
-  
-      input[type="checkbox"]:checked {
-        background-color: #0866FF;
-        border: 1px solid #0866FF;
-      }
-  
-      label {
-        display: inline-flex;
-        align-items: center;
-        font-family: 'Segoe UI';
-        font-weight: 500;
-        font-size:large;
-        color: #FFFFFF;
-        cursor: pointer;
-        white-space: nowrap;
-        padding-left: 5px;
-      }
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid #ccc;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #0866FF;
+    border: 1px solid #0866FF;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    font-size:large;
+    color: #FFFFFF;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-left: 5px;
+}
+
+.friends-online{
+    display: flex;
+    flex-direction: column;
+}
+
+.friends{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: large;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.friends p {
+    margin: 0;
+    padding: 0;
+}
+
+.friends i {
+    margin: 0;
+    padding: 0;
+}
+
+.user-image {
+    width: 2em;
+    height: 2em;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+
+.user-status-container {
+    position: relative;
+    display: inline-block;
+}
+
+.online-indicator {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+
+.event-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.event{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: large;
+    margin: 0 !important;
+    padding: 0;
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 10px;
+    margin-top: 2px !important;
+    background-color: #393a3b;
+    font-weight: 200px;
+}
+
+.event-container:first-child{
+    margin-top: 0px;
+}
+
+.event-container:last-child{
+    margin-bottom: 5px;
+}
+
+.page-text{
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Styles for Create Post Panel */

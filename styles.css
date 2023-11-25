@@ -513,6 +513,7 @@ label {
     position: absolute;
     border-radius: 10px;
     width: 80vw;
+    height: 13%;
 }
 
 #profile-picture {
@@ -742,9 +743,12 @@ label {
 }
 
 .feedpost{
-    background-color: #005eff;
+    display: flex;
+    flex-direction: column;
+    background-color: #242526;
     margin-top: 18vh;
     width: 81vw;
     height: 1200px;
     margin-bottom: 50px;
+    border-radius: 10px;
 }

@@ -1,10 +1,4 @@
 var exploreVisible = false;
-var groupVisible = false;
-var friendsVisible = false;
-var eventsVisible = false;
-var pagesVisible = false;
-var suggestedVisible = false;
-var birthdaysVisible = false;
 
 $( function() {
     $( "#sortable" ).sortable({
@@ -48,6 +42,107 @@ function xPanelClick(){
 
 function editPanelsClick(){
     document.getElementById('overlay').style.visibility = 'visible';
+}
+
+//add functionality for making background gray when clicked
+
+function friendsArrowClick(){
+    var container = document.getElementById('friendsContent');
+    var exploreArrow = document.getElementById('friendsArrow')
+
+    if (container.style.display === 'none') {
+        container.style.display = 'flex';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(90deg)';
+        exploreArrow.style.color = '#0866FF';
+        document.getElementById('friendstitle').style.color = "#0866FF"
+    } else {
+        container.style.display = 'none';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(180deg)';
+        exploreArrow.style.color = '#FFFFFF';
+        document.getElementById('friendstitle').style.color = "#ffffff"
+    }
+}
+
+function groupArrowClick(){
+    var container = document.getElementById('group-container');
+    var exploreArrow = document.getElementById('groupArrow')
+
+    if (container.style.display === 'none') {
+        container.style.display = 'flex';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(90deg)';
+        exploreArrow.style.color = '#0866FF';
+        document.getElementById('groupTitle').style.color = "#0866FF"
+    } else {
+        container.style.display = 'none';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(180deg)';
+        exploreArrow.style.color = '#FFFFFF';
+        document.getElementById('groupTitle').style.color = "#ffffff"
+    }
+}
+
+
+function pageArrowClick(){
+    var container = document.getElementById('page-container');
+    var exploreArrow = document.getElementById('pageArrow')
+
+    if (container.style.display === 'none') {
+        container.style.display = 'flex';
+        container.style.flexDirection = "column"
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(90deg)';
+        exploreArrow.style.color = '#0866FF';
+        document.getElementById('pagestitle').style.color = "#0866FF"
+    } else {
+        container.style.display = 'none';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(180deg)';
+        exploreArrow.style.color = '#FFFFFF';
+        document.getElementById('pagestitle').style.color = "#fff"
+    }
+}
+
+function birthdayArrowClick(){
+    var container = document.getElementById('bday-container');
+    var exploreArrow = document.getElementById('birthdayArrow')
+
+    if (container.style.display === 'none') {
+        container.style.display = 'flex';
+        container.style.flexDirection = "column"
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(90deg)';
+        exploreArrow.style.color = '#0866FF';
+        document.getElementById('bdaytitle').style.color = "#0866FF"
+    } else {
+        container.style.display = 'none';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(180deg)';
+        exploreArrow.style.color = '#FFFFFF';
+        document.getElementById('bdaytitle').style.color = "#fff"
+    }
+}
+
+function eventsArrowClick(){
+    var container = document.getElementById('event-container');
+    var exploreArrow = document.getElementById('eventsArrow')
+
+    if (container.style.display === 'none') {
+        container.style.display = 'flex';
+        container.style.flexDirection = "column"
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(90deg)';
+        exploreArrow.style.color = '#0866FF';
+        document.getElementById('eventtitle').style.color = "#0866FF"
+    } else {
+        container.style.display = 'none';
+        exploreArrow.style.transition = 'transform 0.3s ease, color 0.3s ease';
+        exploreArrow.style.transform = 'rotate(180deg)';
+        exploreArrow.style.color = '#FFFFFF';
+        document.getElementById('eventtitle').style.color = "#fff"
+    }
 }
 
 function shortcutsClick() {

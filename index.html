@@ -1,198 +1,213 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Facebook</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-        <script src="https://kit.fontawesome.com/e9348bb64a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    </head>
 
-    <body>
+<head>
+    <title>Facebook</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://kit.fontawesome.com/e9348bb64a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
 
-        <!--Header v----------------------------------------------------------------------------------------------------->
+<body>
 
-        <div class = "header">
-            <div class = "left-side">
-                <div>
-                    <button id="facebookLogoButton" onclick="homeClick()">
-                        <i class="fa-brands fa-facebook fa-2xl" style="color: #0866ff;"></i>
-                      </button>
-                </div>
-                <form class = "search-container">
-                    <input type="text" placeholder="Search Facebook" class="Searchbar">
-                </form>  
+    <!--Header v----------------------------------------------------------------------------------------------------->
+
+    <div class="header">
+        <div class="left-side">
+            <div>
+                <button id="facebookLogoButton" onclick="homeClick()">
+                    <i class="fa-brands fa-facebook fa-2xl" style="color: #0866ff;"></i>
+                </button>
+            </div>
+            <form class="search-container">
+                <input type="text" placeholder="Search Facebook" class="Searchbar">
+            </form>
+        </div>
+
+        <div class="center-side">
+            <div class="center-buttons button-class" onclick="marketplaceClick()">
+                <i class="fa-solid fa-store fa-xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px !important; margin-left: 10px;">Marketplace</p>
             </div>
 
-            <div class = "center-side">
-                <div class="center-buttons button-class" onclick="marketplaceClick()">
-                    <i class="fa-solid fa-store fa-xl" style="color: #ffffff;"></i>
-                    <p style="font-size: 24px !important; margin-left: 10px;">Marketplace</p>
-                </div>
+            <div class="vertical-line"></div>
 
-                <div class="vertical-line"></div>
-                
-                <div class = "center-buttons button-class" onclick="videoClick()">
-                    <i class="fa-solid fa-video fa-2xl" style="color: #ffffff;"></i>
-                    <p style="font-size: 24px; margin-left: 10px;">Video</p>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <div class = "center-buttons button-class underline" onclick="homeClick()">
-                    <i class="fa-solid fa-house fa-2xl" style="color: #0866FF;"></i>
-                    <p style="color: #0866FF; font-size: 24px; margin-left: 10px;">Home</p>
-                </div>
-
-                <div class="vertical-line"></div>
-
-                <div class = "center-buttons button-class" onclick="showFloatingPanel()">
-                    <i class="fa-solid fa-circle-plus fa-2xl" style="color: #ffffff;"></i>
-                    <p style="font-size: 24px; margin-left: 10px;">Create</p>
-                </div>
+            <div class="center-buttons button-class" onclick="videoClick()">
+                <i class="fa-solid fa-video fa-2xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px; margin-left: 10px;">Video</p>
             </div>
 
-            <div class = "right-side">
-                <div class="icon-background button-class" onclick="settingsClick()">
-                    <i class="fa-solid fa-gear fa-2xl " style="color: #ffffff;"></i>
-                </div>
+            <div class="vertical-line"></div>
 
-                <div class="icon-background button-class" onclick="userClick()">
-                    <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
-                </div>
-
-                <div class="icon-background button-class" onclick="notificationClick()">
-                    <i class="fa-solid fa-bell fa-2xl" style="color: #ffffff;"></i>
-                </div>
-
-                <div class="icon-background button-class"onclick="messengerClick()">
-                    <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #ffffff;"></i>
-                </div>
-            </div>
-        </div>   
-
-<!--Left Side Panel v----------------------------------------------------------------------------------------------------->
-
-        <div id = "side1" class = "leftSideBar" style="visibility: visible;">
-            <div class = "tab-switch fixed-child">
-                <div class="tab-buttons button-class underline"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;color:#0866FF;">Links</p></div>
-                <div class="tab-buttons button-class"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500;">Discovery Hub</p></div>
-            </div>
-    
-            <div class = "link-buttons button-class" onclick="userClick()">
-                <i class="fa-solid fa-user" style="color: #b2b2b2; padding-left: 5px;"></i>
-                <p style="font-size: x-large; margin-left: 15px;">User</p>
+            <div class="center-buttons button-class underline" onclick="homeClick()">
+                <i class="fa-solid fa-house fa-2xl" style="color: #0866FF;"></i>
+                <p style="color: #0866FF; font-size: 24px; margin-left: 10px;">Home</p>
             </div>
 
-            <div class = "link-buttons button-class" onclick="friendsClick()">
-                <i class="fa-solid fa-user-group" style="color: #b2b2b2;"></i>
-                <p style="font-size: x-large; margin-left: 10px;">Friends</p>
-            </div>
+            <div class="vertical-line"></div>
 
-            <div class = "link-buttons button-class" onclick="marketplaceClick()">
-                <i class="fa-solid fa-store" style="color: #b2b2b2;"></i>
-                <p style="font-size: x-large; margin-left: 15px;">Marketplace</p>
-            </div>
-
-            <div class = "link-buttons button-class" onclick="videoClick()">
-                <i class="fa-solid fa-video" style="color: #b2b2b2;"></i>
-                <p style="font-size: x-large; margin-left: 15px;">Video</p>
-            </div>
-
-            <div class = "link-buttons button-class" onclick="messengerClick()">
-                <i class="fa-brands fa-facebook-messenger" style="color: #b2b2b2;"></i>
-                <p style="font-size: x-large; margin-left: 18px;">Messenger</p>
-            </div>
-
-            <div style="display: flex;justify-content: left;align-items:center;">
-                <p style="margin:0; margin-top: 10px; font-size: xx-large; font-weight:bolder;">Shortcuts</p>
-                <i id = "shortcutArrow" class="fa-solid fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="shortcutsClick()"></i>
-            </div>
-
-            <div id = "shortcutClickDiv" style="display: flex;justify-content: left;">
-            </div>
-
-            <div style="display: flex; justify-content: left; align-items:center ;">
-                <p style="margin: 0; margin-top: 10px; font-size: xx-large; font-weight: bolder;">Explore</p>
-                <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 fa-xl button-class rotate-class" style="margin-left: 10px; margin-top: 14px;" onclick="exploreClick()"></i>
-            </div>
-
-            <div id = "exploreClickDiv" style="visibility: hidden;">
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-clock-rotate-left" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Memories</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-bookmark" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 18px;">Saved</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-flag" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 14px;">Pages</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-calendar-check" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 14px;">Events</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-chart-line" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Ads Manager</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-earth-americas" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Climate Science</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-shield-heart" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Fundraisers</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-brands fa-meta" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Meta Quest</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                    <i class="fa-solid fa-gamepad" style="color: #434445;"></i>
-                    <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Gaming</p>
-                </div>
-
-                <div class = "link-buttons-unclickable">
-                </div>
+            <div class="center-buttons button-class" onclick="showFloatingPanel()">
+                <i class="fa-solid fa-circle-plus fa-2xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px; margin-left: 10px;">Create</p>
             </div>
         </div>
 
-        <div id = "side2" class = "leftSideBar2" style="visibility: hidden;">
-            <div id = "nonSortable" class = "tab-switch fixed-child">
-                <div class="tab-buttons button-class"onclick="linksClick()" ><p style="font-size:larger;font-weight:500;">Links</p></div>
-                <div class="tab-buttons button-class underline"onclick="discoveryHubClick()"><p style="font-size:larger;font-weight:500; color:#0866FF;">Discovery Hub</p></div>
-            </div>
-            <div  id = "nonSortable" class = "discoveryPanels button-class link-buttons" onclick="editPanelsClick()">
-                <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
-                <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Edit Panels</p>
+        <div class="right-side">
+            <div class="icon-background button-class" onclick="settingsClick()">
+                <i class="fa-solid fa-gear fa-2xl " style="color: #ffffff;"></i>
             </div>
 
-            <div  id="friendsOnline" class = "discoveryPanels">
-                <div class="inner-content">
-                    <div class = "discovery-title">
-                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Friends Online</p>
-                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 80px;" onclick=""></i>
-                    </div>
+            <div class="icon-background button-class" onclick="userClick()">
+                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+            </div>
 
-                    <div class = "friends-online">
+            <div class="icon-background button-class" onclick="notificationClick()">
+                <i class="fa-solid fa-bell fa-2xl" style="color: #ffffff;"></i>
+            </div>
+
+            <div class="icon-background button-class" onclick="messengerClick()">
+                <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--Left Side Panel v----------------------------------------------------------------------------------------------------->
+
+    <div id="side1" class="leftSideBar" style="visibility: visible;">
+        <div class="tab-switch fixed-child">
+            <div class="tab-buttons button-class underline" onclick="linksClick()">
+                <p style="font-size:larger;font-weight:500;color:#0866FF;">Links</p>
+            </div>
+            <div class="tab-buttons button-class" onclick="discoveryHubClick()">
+                <p style="font-size:larger;font-weight:500;">Discovery Hub</p>
+            </div>
+        </div>
+
+        <div class="link-buttons button-class" onclick="userClick()">
+            <i class="fa-solid fa-user" style="color: #b2b2b2; padding-left: 5px;"></i>
+            <p style="font-size: x-large; margin-left: 15px;">User</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="friendsClick()">
+            <i class="fa-solid fa-user-group" style="color: #b2b2b2;"></i>
+            <p style="font-size: x-large; margin-left: 10px;">Friends</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="marketplaceClick()">
+            <i class="fa-solid fa-store" style="color: #b2b2b2;"></i>
+            <p style="font-size: x-large; margin-left: 15px;">Marketplace</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="videoClick()">
+            <i class="fa-solid fa-video" style="color: #b2b2b2;"></i>
+            <p style="font-size: x-large; margin-left: 15px;">Video</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="messengerClick()">
+            <i class="fa-brands fa-facebook-messenger" style="color: #b2b2b2;"></i>
+            <p style="font-size: x-large; margin-left: 18px;">Messenger</p>
+        </div>
+
+        <div style="display: flex;justify-content: left;align-items:center;">
+            <p style="margin:0; margin-top: 10px; font-size: xx-large; font-weight:bolder;">Shortcuts</p>
+            <i id="shortcutArrow" class="fa-solid fa-caret-up fa-rotate-180 fa-xl button-class rotate-class"
+                style="margin-left: 10px; margin-top: 14px;" onclick="shortcutsClick()"></i>
+        </div>
+
+        <div id="shortcutClickDiv" style="display: flex;justify-content: left;">
+        </div>
+
+        <div style="display: flex; justify-content: left; align-items:center ;">
+            <p style="margin: 0; margin-top: 10px; font-size: xx-large; font-weight: bolder;">Explore</p>
+            <i id="exploreArrow" class="fas fa-caret-up fa-rotate-180 fa-xl button-class rotate-class"
+                style="margin-left: 10px; margin-top: 14px;" onclick="exploreClick()"></i>
+        </div>
+
+        <div id="exploreClickDiv" style="visibility: hidden;">
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-clock-rotate-left" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Memories</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-bookmark" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 18px;">Saved</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-flag" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 14px;">Pages</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-calendar-check" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 14px;">Events</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-chart-line" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Ads Manager</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-earth-americas" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Climate Science</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-shield-heart" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Fundraisers</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-brands fa-meta" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Meta Quest</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+                <i class="fa-solid fa-gamepad" style="color: #434445;"></i>
+                <p style="color: #8e8e8e; font-size: x-large; margin-left: 10px;">Gaming</p>
+            </div>
+
+            <div class="link-buttons-unclickable">
+            </div>
+        </div>
+    </div>
+
+    <div id="side2" class="leftSideBar2" style="visibility: hidden;">
+        <div id="nonSortable" class="tab-switch fixed-child">
+            <div class="tab-buttons button-class" onclick="linksClick()">
+                <p style="font-size:larger;font-weight:500;">Links</p>
+            </div>
+            <div class="tab-buttons button-class underline" onclick="discoveryHubClick()">
+                <p style="font-size:larger;font-weight:500; color:#0866FF;">Discovery Hub</p>
+            </div>
+        </div>
+        <div id="nonSortable" class="discoveryPanels button-class link-buttons" onclick="editPanelsClick()">
+            <i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i>
+            <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Edit Panels</p>
+        </div>
+
+        <div id="friendsOnline" class="discoveryPanels">
+            <div class="inner-content">
+                <div class="discovery-title">
+                    <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;" id="friendstitle">Friends Online
+                    </p>
+                    <i id="friendsArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class"
+                        style="margin-left: 80px;" onclick="friendsArrowClick()"></i>
+                </div>
+
+                <div id="friendsContent" style="display: none;">
+                    <div class="friends-online">
                         <div class="friends" style=" margin-bottom: 15px;">
                             <div class="user-status-container" style="margin-right: 10px;">
                                 <img src="Images\Ratvinder-Grewal.jpg" alt="User Image" class="user-image">
                                 <div class="online-indicator"></div>
                             </div>
                             <p>Dr. Ratvinder Grewal</p>
-                            <i class="button-class fa-brands fa-facebook-messenger" style= "margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
+                            <i class="button-class fa-brands fa-facebook-messenger"
+                                style="margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
                         </div>
 
                         <div class="friends" style=>
@@ -201,7 +216,8 @@
                                 <div class="online-indicator"></div>
                             </div>
                             <p>Mark Zuckerberg</p>
-                            <i class="button-class fa-brands fa-facebook-messenger" style= "margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
+                            <i class="button-class fa-brands fa-facebook-messenger"
+                                style="margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
                         </div>
 
                         <div class="friends" style=>
@@ -210,64 +226,70 @@
                                 <div class="online-indicator"></div>
                             </div>
                             <p>Dr. Kalpdrum Passi</p>
-                            <i class="button-class fa-brands fa-facebook-messenger" style= "margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
+                            <i class="button-class fa-brands fa-facebook-messenger"
+                                style="margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
                         </div>
 
                         <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="events" class="discoveryPanels">
+            <div class="inner-content">
+                <div class="discovery-title">
+                    <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;" id="eventtitle">Events</p>
+                    <i id="eventsArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class"
+                        style="margin-left: 165px;" onclick="eventsArrowClick()"></i>
+                </div>
+
+                <div id="event-container" style="display: none;">
+
+                    <div class="event" style=" margin-bottom: 15px;">
+                        <p style="font-size: small; color: #b2b2b2;">3d, 12:00PM - "Family Lunch"</p>
+                    </div>
+
+                    <div class="event" style=" margin-bottom: 15px;">
+                        <p style="font-size: small; color: #b2b2b2;">2w, 4:00PM - "Job Interview"</p>
+                    </div>
+
+                    <div class="event" style=" margin-bottom: 15px;">
+                        <p style="font-size: small; color: #b2b2b2;">4m, 8:00PM - "Cousin baby shower"</p>
+                    </div>
+
+                    <div class="event" style=" margin-bottom: 15px;">
+                        <p style="font-size: small; color: #b2b2b2;">1y, 12:00AM - "New year celebration pa..."</p>
+                    </div>
+
+                    <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
 
                 </div>
             </div>
+        </div>
 
-            <div id="events" class = "discoveryPanels">
-                <div class="inner-content">
-                    <div class = "discovery-title">
-                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Events</p>
-                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 165px;" onclick=""></i>
-                    </div>
-
-                    <div class = "event-container">
-
-                        <div class="event" style=" margin-bottom: 15px;">
-                            <p style="font-size: small; color: #b2b2b2;" >3d, 12:00PM - "Family Lunch"</p>
-                        </div>
-
-                        <div class="event" style=" margin-bottom: 15px;">
-                            <p style="font-size: small; color: #b2b2b2;" >2w, 4:00PM - "Job Interview"</p>
-                        </div>
-
-                        <div class="event" style=" margin-bottom: 15px;">
-                            <p style="font-size: small; color: #b2b2b2;" >4m, 8:00PM - "Cousin baby shower"</p>
-                        </div>
-
-                        <div class="event" style=" margin-bottom: 15px;">
-                            <p style="font-size: small; color: #b2b2b2;" >1y, 12:00AM - "New year celebration pa..."</p>
-                        </div>
-
-                        <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
-
-                    </div>
+        <div id="pages" class="discoveryPanels">
+            <div class="inner-content">
+                <div class="discovery-title">
+                    <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;" id="pagestitle">Pages</p>
+                    <i id="pageArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class"
+                        style="margin-left: 171px;" onclick="pageArrowClick()"></i>
                 </div>
-            </div>
 
-            <div id="pages" class = "discoveryPanels">
-                <div class="inner-content">
-                    <div class = "discovery-title">
-                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Pages</p>
-                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 171px;" onclick=""></i>
-                    </div>
-
-                    <div class="friends" style=>
-                        <img src="Images\laurentian-university.jpg" alt="User Image" class="user-image" style="margin-right: 10px;">
-                        <div class = "page-text">
+                <div id="page-container" style="display: none;">
+                    <div class="friends">
+                        <img src="Images\laurentian-university.jpg" alt="User Image" class="user-image"
+                            style="margin-right: 10px;">
+                        <div class="page-text">
                             <p>Laurentian University</p>
                             <p style="color: #b2b2b2; font-size: x-small;">Members: 201k</p>
                         </div>
                     </div>
 
-                    <div class="friends" style=>
-                        <img src="Images\Facebook Ui Haters.jpg" alt="User Image" class="user-image" style="margin-right: 10px;">
-                        <div class = "page-text">
+                    <div class="friends">
+                        <img src="Images\Facebook Ui Haters.jpg" alt="User Image" class="user-image"
+                            style="margin-right: 10px;">
+                        <div class="page-text">
                             <p>Facebook UI Haters</p>
                             <p style="color: #b2b2b2; font-size: x-small;">Members: 89m</p>
                         </div>
@@ -275,186 +297,259 @@
                         <i class="fa-solid fa-circle-check fa-sm" style="margin-left: 10px;"></i>
                     </div>
 
-                    <div class="friends" style=>
-                        <img src="Images\Slay-Queen.jpg" alt="User Image" class="user-image" style="margin-right: 10px;">
-                        <div class = "page-text">
+                    <div class="friends">
+                        <img src="Images\Slay-Queen.jpg" alt="User Image" class="user-image"
+                            style="margin-right: 10px;">
+                        <div class="page-text">
                             <p>Slay Queen's Fan Page</p>
                             <p style="color: #b2b2b2; font-size: x-small;">Members: 49k</p>
                         </div>
                     </div>
-                        <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
-                </div>
-            </div>
-
-            <div id="suggested" class = "discoveryPanels">
-                <div class="inner-content">
-                    <div class = "discovery-title">
-                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Suggested</p>
-                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 122px;" onclick=""></i>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div id="birthdays" class = "discoveryPanels">
-                <div class="inner-content">
-                    <div class = "discovery-title">
-                        <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;">Birthdays</p>
-                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 137px;" onclick=""></i>
-                    </div>
-
-
-                </div>
-            </div>
-
-            <div id="groupConversations" class = "discoveryPanels">
-                <div class="inner-content">
-                    <div class = "discovery-title">
-                        <p style="color: #FFFFFF; white-space: nowrap; font-size: x-large; margin-left: 10px;">Group Conversations</p>
-                        <i id = "exploreArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class" style="margin-left: 18px;" onclick=""></i>
-                    </div>
-
-
+                    <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
                 </div>
             </div>
         </div>
 
+        <div id="birthdays" class="discoveryPanels">
+            <div class="inner-content">
+                <div class="discovery-title">
+                    <p style="color: #FFFFFF; font-size: x-large; margin-left: 14px;" id="bdaytitle">Birthdays</p>
+                    <i id="birthdayArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class"
+                        style="margin-left: 137px;" onclick="birthdayArrowClick()"></i>
+                </div>
 
+                <div id="bday-container" class="inner-content" style="display: none;">
 
-        <div id ="overlay" class="overlay" style="visibility: hidden;">
-            <div id = "sortable" class="overlay-content">
-                <div id ="nonSortable"class="panel-top">
-                    <div class="x-background button-class" style="margin-left: 10px; margin-right: 40px;" onclick="xPanelClick()">
-                        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                    <p style="margin-bottom: 5px !important; margin-top: 0 !important;">Tomorrow</p>
+
+                    <div class="friends" style="margin-bottom: 5px !important;">
+                        <img src="Images\mandel-howie-medium.webp" alt="User Image" class="user-image"
+                            style="margin-top: 0 !important; margin-right: 10px;">
+                        <p>Howie Mandel</p>
+                        <p style="color: #b2b2b2; font-size: small; margin-left: 5px;">68</p>
                     </div>
-                  <p style="margin: 0; font-weight: 500; color:white; font-size: x-large;">Panel Editor</p>
-                </div>
 
-                <div id="friendsOnline" class ="drag-panels" style="margin-bottom: 5px;">
-                    <label>
-                        <input type="checkbox" checked>
-                        <p style="margin-left: 10px; user-select: none;">Friends Online</p>
-                    </label>
-                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 115px;"></i>
-                </div>
+                    <div class="friends" style=>
+                        <img src="Images\boseman-chadwick-image.jpg" alt="User Image" class="user-image"
+                            style="margin-right: 10px;">
+                        <p>Chadwick Boseman</p>
+                        <p style="color: #b2b2b2; font-size: small; margin-left: 5px;">47</p>
+                    </div>
 
-                <div id="events" class ="drag-panels" style="margin-bottom: 5px;">
-                    <label>
-                        <input type="checkbox" checked>
-                        <p style="margin-left: 10px; user-select: none;">Events</p>
-                    </label>
-                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 180px;"></i>
-                </div>
 
-                <div id="pages" class ="drag-panels" style="margin-bottom: 5px;">
-                    <label>
-                        <input type="checkbox" checked>
-                        <p style="margin-left: 10px; user-select: none;">Pages</p>
-                    </label>
-                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 185px;"></i>
-                </div>
+                    <p style="margin-bottom: 5px !important; margin-top: 0 !important;">Dec 2nd</p>
 
-                <div id="suggested" class ="drag-panels" style="margin-bottom: 5px;">
-                    <label>
-                        <input type="checkbox" checked>
-                        <p style="margin-left: 10px; user-select: none;">Suggested</p>
-                    </label>
-                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 146px;"></i>
-                </div>
+                    <div class="friends" style="margin-bottom: 5px !important;">
+                        <img src="Images\puth-charlie-medium.webp" alt="User Image" class="user-image"
+                            style="margin-right: 10px;">
+                        <p>Charlie Puth</p>
+                        <p style="color: #b2b2b2; font-size: small; margin-left: 5px;">32</p>
+                    </div>
 
-                <div id="birthdays" class ="drag-panels" style="margin-bottom: 5px;">
-                    <label>
-                        <input type="checkbox" checked>
-                        <p style="margin-left: 10px; user-select: none;">Birthdays</p>
-                    </label>
-                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 156px;"></i>
-                </div>
+                    <div class="friends">
+                        <img src="Images\spears-britney-medium.jpg" alt="User Image" class="user-image"
+                            style="margin-right: 10px;">
+                        <p>Britney Spears</p>
+                        <p style="color: #b2b2b2; font-size: small; margin-left: 5px;">42</p>
+                    </div>
 
-                <div id="groupConversations" class ="drag-panels" style="margin-bottom: 5px;">
-                    <label>
-                        <input type="checkbox" checked>
-                        <p style="margin-left: 10px; user-select: none;">Group Conversations</p>
-                    </label>
-                    <i class="fa-solid fa-grip-vertical button-class" style="font-size: x-large; color: white; margin-left: 62px;"></i>
+
+                    <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
+
                 </div>
 
             </div>
-          </div>
+        </div>
 
-          <!----Main feed --->
-        <div class="content-area" id="mainContent">
-            <section>
-          
-                <div class="create-post">
-                  <i onclick="userClick()" id="profile-picture" class=" button-class fa-solid fa-circle-user"></i>
-                  <div class="create-post-content">
-                    <button id="postContent" class="text-area-button" onclick="showFloatingPanel()" placeholder="What's on your mind, User?" aria-label="Write a post">What's on your mind, User?</button>
-                    </div>
-                  <hr class="create-post-hr">
-          
-                  <div class="buttons-container">
-                  <button onclick="showFloatingPanel()">
-                    <i class="fa-solid fa-video" style="color: #b2b3b4; font-size: 30px"></i>
-                    <span style="margin-left: 5px; margin-top: -20px">Live Video</span>
-                  </button>
-          
-                  <button onclick="showFloatingPanel()">
-                    <i class="fa-solid fa-circle-play" style="color: #b2b3b4; font-size: 30px"></i>
-                    <span style="margin-left: 5px;">Stories</span>
-                  </button>
-          
-                  <input type="file" id="fileInput" accept="image/*, video/*" style="display: none;">
-                  <button onclick="showFloatingPanel()">
-                    <i class="fa-solid fa-photo-film" style="color: #b2b3b4; font-size: 30px"></i>
-                    <span style="margin-left: 5px;">Photo/video</span>
-                  </button>
-          
-                  <button onclick="showFloatingPanel()">
-                    <i class="fa-regular fa-face-smile" style="color: #b2b3b4; font-size: 30px"></i>
-                    <span style="margin-left: 5px;">Feeling/activity</span>
-                  </button>
-                  </div>
+        <div id="groupConversations" class="discoveryPanels">
+            <div class="inner-content">
+                <div class="discovery-title">
+                    <p style="color: #FFFFFF; white-space: nowrap; font-size: x-large; margin-left: 10px;" id = "groupTitle">Group
+                        Conversations</p>
+                    <i id="groupArrow" class="fas fa-caret-up fa-rotate-180 button-class rotate-class"
+                        style="margin-left: 18px;" onclick="groupArrowClick()"></i>
                 </div>
-          
-                <!-- Floating Create Post Panel -->
-                <div class="floating-panel" id="floatingPanel">
-                    <div class="create-post-panel">
-                        <div class="panel-header">
-                            <p class="create-post-header">Create post</p>
-                            <button onclick="hideFloatingPanel()" class="close-button button-class">X</button>
-                        </div>
-                        <hr class="line-divider">
-                        <div class="content">
-                            <div class="audience-page">
-                                <button class="back-btn">Back</button>
-                                <div class="audience-panel">
-                                    <a href="#" data-audience="Public"><i class="fa-solid fa-earth-americas" style="color: #ffffff;"></i> Public</a>
-                                    <a href="#" data-audience="Friends"><i class="fa-solid fa-user-group" style="color: #ffffff;"></i> Friends</a>
-                                    <a href="#" data-audience="Only Me"><i class="fa-solid fa-lock" style="color: #ffffff;"></i> Only Me</a>   
+                <div  id = "group-container" style="display: none;">
+                    <div class="friends-online">
+                        <div class="friends" style=" margin-bottom: 15px;">
+                                <img src="Images\group c.png" alt="User Image" class="user-image" style="margin-right: 5px !important;">
+                                <div class="page-text">
+                                    <p>Group C</p>
+                                    <p style="color: #b2b2b2; font-size: x-small; font-weight: bold;">Dylan: Ok sounds good.</p>
                                 </div>
-                            </div>
+                            <i class="button-class fa-brands fa-facebook-messenger"
+                                style="margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
+                        </div>
 
-                            <div class="main-page"> 
-                                <i id="profile-picture" class="button-class fa-solid fa-circle-user"></i>
-                                <div class="user-info">
-                                    <span class="username">Username</span>
-                                    <button class="dropdown-btn">
-                                        <i class="fa-solid fa-earth-americas" style="color: #8e8e8e; font-size: x-small; padding-right: 10px;"></i>Public<i class="fa-solid fa-play fa-rotate-90 fa-2xs" style="margin-left: 10px; font-size: xx-small; color: #8e8e8e;"></i>
-                                    </button>
+                        <div class="friends" style=>
+                                <img src="Images\pizza.jpg" alt="User Image" class="user-image" style="margin-right: 5px !important;">
+                                <div class="page-text">
+                                    <p>The BOYS</p>
+                                    <p style="color: #b2b2b2; font-size: x-small; font-weight: bold;">Aidan: Ok at 5 then. - 10m</p>
                                 </div>
-                                <textarea id ="user-text" class="post-text" placeholder="What's on your mind, User?"></textarea>
-                                <div class="actions">
-                                    <button onclick="hideFloatingPanel()" class="button-class post-btn">Post</button>
-                                </div>
-                            </div>
+                            <i class="button-class fa-brands fa-facebook-messenger"
+                                style="margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
                         </div>
+
+                        <div class="friends" style=>
+                                <img src="Images\THEGIRLS.jpg" alt="User Image" class="user-image" style="margin-right: 5px !important;">
+                                <div class="page-text">
+                                    <p>The Girls</p>
+                                    <p style="color: #b2b2b2; font-size: x-small; font-weight: bold;">Lily: yes lmfao - 1d</p>
+                                </div>
+                            <i class="button-class fa-brands fa-facebook-messenger"
+                                style="margin-left: 10px; color: #ffffff;" onclick="messengerClick()"></i>
+                        </div>
+
+                        <p style="font-size: small; color: #8e8e8e; user-select: none;">Show more</p>
                     </div>
                 </div>
-                <div class="dim-overlay"></div>
+            </div>
+        </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <script src="script.js"></script>
-    </body>
+
+
+    <div id="overlay" class="overlay" style="visibility: hidden;">
+        <div id="sortable" class="overlay-content">
+            <div id="nonSortable" class="panel-top">
+                <div class="x-background button-class" style="margin-left: 10px; margin-right: 40px;"
+                    onclick="xPanelClick()">
+                    <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                </div>
+                <p style="margin: 0; font-weight: 500; color:white; font-size: x-large;">Panel Editor</p>
+            </div>
+
+            <div id="friendsOnline" class="drag-panels" style="margin-bottom: 5px;">
+                <label>
+                    <input type="checkbox" checked>
+                    <p style="margin-left: 10px; user-select: none;">Friends Online</p>
+                </label>
+                <i class="fa-solid fa-grip-vertical button-class"
+                    style="font-size: x-large; color: white; margin-left: 115px;"></i>
+            </div>
+
+            <div id="events" class="drag-panels" style="margin-bottom: 5px;">
+                <label>
+                    <input type="checkbox" checked>
+                    <p style="margin-left: 10px; user-select: none;">Events</p>
+                </label>
+                <i class="fa-solid fa-grip-vertical button-class"
+                    style="font-size: x-large; color: white; margin-left: 180px;"></i>
+            </div>
+
+            <div id="pages" class="drag-panels" style="margin-bottom: 5px;">
+                <label>
+                    <input type="checkbox" checked>
+                    <p style="margin-left: 10px; user-select: none;">Pages</p>
+                </label>
+                <i class="fa-solid fa-grip-vertical button-class"
+                    style="font-size: x-large; color: white; margin-left: 185px;"></i>
+            </div>
+
+            <div id="birthdays" class="drag-panels" style="margin-bottom: 5px;">
+                <label>
+                    <input type="checkbox" checked>
+                    <p style="margin-left: 10px; user-select: none;">Birthdays</p>
+                </label>
+                <i class="fa-solid fa-grip-vertical button-class"
+                    style="font-size: x-large; color: white; margin-left: 156px;"></i>
+            </div>
+
+            <div id="groupConversations" class="drag-panels" style="margin-bottom: 5px;">
+                <label>
+                    <input type="checkbox" checked>
+                    <p style="margin-left: 10px; user-select: none;">Group Conversations</p>
+                </label>
+                <i class="fa-solid fa-grip-vertical button-class"
+                    style="font-size: x-large; color: white; margin-left: 62px;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!----Main feed --->
+    <div class="content-area" id="mainContent">
+        <section>
+
+            <div class="create-post">
+                <i onclick="userClick()" id="profile-picture" class=" button-class fa-solid fa-circle-user"></i>
+                <div class="create-post-content">
+                    <button id="postContent" class="text-area-button" onclick="showFloatingPanel()"
+                        placeholder="What's on your mind, User?" aria-label="Write a post">What's on your mind,
+                        User?</button>
+                </div>
+                <hr class="create-post-hr">
+
+                <div class="buttons-container">
+                    <button onclick="showFloatingPanel()">
+                        <i class="fa-solid fa-video" style="color: #b2b3b4; font-size: 30px"></i>
+                        <span style="margin-left: 5px; margin-top: -20px">Live Video</span>
+                    </button>
+
+                    <button onclick="showFloatingPanel()">
+                        <i class="fa-solid fa-circle-play" style="color: #b2b3b4; font-size: 30px"></i>
+                        <span style="margin-left: 5px;">Stories</span>
+                    </button>
+
+                    <input type="file" id="fileInput" accept="image/*, video/*" style="display: none;">
+                    <button onclick="showFloatingPanel()">
+                        <i class="fa-solid fa-photo-film" style="color: #b2b3b4; font-size: 30px"></i>
+                        <span style="margin-left: 5px;">Photo/video</span>
+                    </button>
+
+                    <button onclick="showFloatingPanel()">
+                        <i class="fa-regular fa-face-smile" style="color: #b2b3b4; font-size: 30px"></i>
+                        <span style="margin-left: 5px;">Feeling/activity</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Floating Create Post Panel -->
+            <div class="floating-panel" id="floatingPanel">
+                <div class="create-post-panel">
+                    <div class="panel-header">
+                        <p class="create-post-header">Create post</p>
+                        <button onclick="hideFloatingPanel()" class="close-button button-class">X</button>
+                    </div>
+                    <hr class="line-divider">
+                    <div class="content">
+                        <div class="audience-page">
+                            <button class="back-btn">Back</button>
+                            <div class="audience-panel">
+                                <a href="#" data-audience="Public"><i class="fa-solid fa-earth-americas"
+                                        style="color: #ffffff;"></i> Public</a>
+                                <a href="#" data-audience="Friends"><i class="fa-solid fa-user-group"
+                                        style="color: #ffffff;"></i> Friends</a>
+                                <a href="#" data-audience="Only Me"><i class="fa-solid fa-lock"
+                                        style="color: #ffffff;"></i> Only Me</a>
+                            </div>
+                        </div>
+
+                        <div class="main-page">
+                            <i id="profile-picture" class="button-class fa-solid fa-circle-user"></i>
+                            <div class="user-info">
+                                <span class="username">Username</span>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-earth-americas"
+                                        style="color: #8e8e8e; font-size: x-small; padding-right: 10px;"></i>Public<i
+                                        class="fa-solid fa-play fa-rotate-90 fa-2xs"
+                                        style="margin-left: 10px; font-size: xx-small; color: #8e8e8e;"></i>
+                                </button>
+                            </div>
+                            <textarea id="user-text" class="post-text"
+                                placeholder="What's on your mind, User?"></textarea>
+                            <div class="actions">
+                                <button onclick="hideFloatingPanel()" class="button-class post-btn">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dim-overlay"></div>
+
+            <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+            <script src="script.js"></script>
+</body>
+
 </html>

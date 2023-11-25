@@ -739,3 +739,11 @@ label {
     margin-top: 3px;
     width: 28%;
 }
+
+.feedpost{
+    background-color: #005eff;
+    margin-top: 18vh;
+    width: 81vw;
+    height: 1200px;
+    margin-bottom: 50px;
+}

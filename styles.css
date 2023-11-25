@@ -1,7 +1,22 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #38393a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8e8e8e;
+}
+
+
 body {
     font-family: "Segoe UI";
     background-color: #18191A;
     margin: 0;
+    scrollbar-width: thin;
+    scrollbar-color: #8e8e8e;
 }
 
 .header {
@@ -38,6 +53,7 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     border-radius: 10%;
+    transition: background-color 0.2s ease;
 }
 
 .center-buttons:hover {
@@ -103,6 +119,7 @@ body {
     border-radius: 50%;
     margin-right: 8px;
     font-size: large;
+    transition: background-color 0.2s ease;
 }
 
 .icon-background:hover {
@@ -257,6 +274,7 @@ body {
     margin-left: 10px;
     border-radius: 7%;
     height: 50px;
+    transition: background-color 0.2s ease;
 }
 
 .tab-buttons:hover {
@@ -271,6 +289,7 @@ body {
     align-items: center;
     font-size: xx-large;
     border-radius: 8%;
+    transition: background-color 0.2s ease;
 }
 
 .link-buttons-unclickable {
@@ -563,6 +582,7 @@ label {
     flex: 0 0 25%;
     min-width: 0;
     white-space: nowrap;
+    transition: background-color 0.2s ease;
 }
 
 .buttons-container button:hover {
@@ -596,6 +616,7 @@ label {
     padding: 9px;
     margin-left: -27px;
     margin-bottom: 13px;
+    transition: background-color 0.2s ease;
 }
 
 .text-area-button:hover {
@@ -659,6 +680,7 @@ label {
     justify-content: center;
     align-items: center;
     margin-right: -15px;
+    transition: background-color 0.2s ease;
 }
 
 .close-button:hover {
@@ -724,6 +746,7 @@ label {
     border: none;
     margin-left: -8px;
     padding: 5px 0px;
+    transition: background-color 0.2s ease;
 }
 
 .post-btn:hover {
@@ -742,16 +765,14 @@ label {
     width: 28%;
 }
 
-.feedpost{
+.feedpost {
     display: flex;
     flex-direction: column;
     background-color: #242526;
     margin-top: 18vh;
-    width: 81vw;
-    height: 1200px;
+    width: 80vw;
     margin-bottom: 50px;
     border-radius: 10px;
-    padding: 10px;
 }
 
 .feedpost-name{
@@ -764,4 +785,36 @@ label {
 .post-information{
     display: flex;
     flex-direction: row;
+    padding: 10px;
+}
+
+.post-image {
+    width: 100%;
+}
+
+.post-image img {
+    width: 100%;
+    max-height: 80vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.like-comment-share-feed{
+    display: flex;
+    flex-direction: row;
+    font-size: medium !important;
+    font-weight: 500 !important;
+    align-items:center;
+    justify-content: center;
+    margin-top: 10px;
+    color: #727274;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3A3B3C;
+    user-select: none;
+}
+
+.comments{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #3A3B3C;
 }

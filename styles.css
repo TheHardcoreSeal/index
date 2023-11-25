@@ -521,7 +521,7 @@ label {
     position: absolute;
     margin-top: -2.5px;
     color: white;
-    font-size: 36px;
+    font-size: 50px;
     transition: color 0.3s ease;
 }
 
@@ -751,4 +751,17 @@ label {
     height: 1200px;
     margin-bottom: 50px;
     border-radius: 10px;
+    padding: 10px;
+}
+
+.feedpost-name{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.post-information{
+    display: flex;
+    flex-direction: row;
 }

@@ -1,5 +1,10 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 2px;
 }
 
 ::-webkit-scrollbar-track {
@@ -20,13 +25,13 @@ body {
 }
 
 .header {
-    width: 100%;
+    width: 100vw;
     position: fixed;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     background-color: #242526;
-    height: 60px;
+    height: 2.55vw;
     z-index: 1000;
 }
 
@@ -37,22 +42,30 @@ body {
 }
 
 .center-side {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 2.55vw;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .center-buttons {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-weight: 600;
     font-size: larger;
+    font-weight:bold;
     color: #fff;
-    height: 60px;
-    padding-left: 30px;
-    padding-right: 30px;
-    border-radius: 10%;
+    height: 2.55vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
     transition: background-color 0.2s ease;
 }
 
@@ -82,8 +95,8 @@ body {
 }
 
 .vertical-line {
-    height: 40px;
-    width: 1px;
+    height: 80%;
+    width: 0.1%;
     background-color: #434445;
 }
 
@@ -91,6 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    height: 2.55vw;
 }
 
 .button-class {
@@ -101,24 +115,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 2.2vw;
+    height: 2.2vw;
     background-color: #3A3B3C;
-    border-radius: 50%;
-    margin-right: 8px;
-    font-size: large;
+    border-radius: 2.5vw;
+    font-size: 1vw;
 }
 
 .icon-background {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 2.5vw;
+    height: 2.5vw;
     background-color: #3A3B3C;
-    border-radius: 50%;
-    margin-right: 8px;
-    font-size: large;
+    border-radius: 2.5vw;
+    margin-right: 0.3vw;
+    font-size: 0.9vw;
     transition: background-color 0.2s ease;
 }
 
@@ -131,15 +144,17 @@ body {
 }
 
 .search-container {
+    display: flex;
+    align-items: center;
     position: relative;
     display: inline-block;
-    margin-left: 10px;
+    margin-left: 0.8vw;
 }
 
 .Searchbar {
-    width: 200px;
-    height: 30px;
-    padding-left: 30px;
+    width: 12vw;
+    height: 1.8vw;
+    padding-left: 1.8vw;
     background-color: #3A3B3C;
     border-radius: 5vw;
     border: 2px solid #3A3B3C;
@@ -152,25 +167,25 @@ body {
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
     position: absolute;
-    left: 10px;
-    top: 50%;
+    left: 0.6vw;
+    top: 1vw;
     transform: translateY(-50%);
     color: #B2B2B2;
 }
 
 #facebookLogoButton {
     cursor: pointer;
-    margin-left: 10px;
+    margin-left: 0.3vw;
     float: left;
     background-color: white;
-    height: 45px;
-    width: 45px;
+    height: 4.5vh;
+    width: 2.4vw;
     padding: 0;
-    border-radius: 50%;
+    border-radius: 2.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: x-large;
+    font-size: 1.2vw;
 }
 
 #facebookLogoButton i {
@@ -185,33 +200,29 @@ body {
     align-content: start;
     align-items: start;
     position: fixed;
-    top: 60px;
+    top: 2.55vw;
+    width: 15vw;
     left: 0;
-    width: 280px;
-    height: calc(100vh - 60px);
+    height: 100vh;
     background-color: #242526;
     color: #fff;
-    padding: 10px;
+    padding: 0.3vw;
     padding-top: 0;
     overflow-y: auto;
-
-    scrollbar-width: thin;
-    scrollbar-color: #38393a #242526;
 }
 
 .leftSideBar::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
 }
 
 .leftSideBar:first-child {
-    margin-top: 0px;
+    margin-top: 0;
     justify-content: center;
     position: fixed;
 }
 
 .leftSideBar .fixed-child {
     position: sticky;
-    top: 0px;
     background-color: #242526;
 }
 
@@ -223,13 +234,13 @@ body {
     align-content: start;
     align-items: start;
     position: fixed;
-    top: 60px;
+    top: 2.55vw;
+    width: 15vw;
     left: 0;
-    width: 280px;
-    height: calc(100vh - 60px);
+    height: calc(100vw - 2.55vw);
     background-color: #242526;
     color: #fff;
-    padding: 10px;
+    padding: 0.3vw;
     padding-top: 0;
     overflow-y: auto;
 
@@ -238,29 +249,28 @@ body {
 }
 
 .leftSideBar2::-webkit-scrollbar {
-    width: 0px;
+    width: 0;
 }
 
 .leftSideBar2:first-child {
-    margin-top: 0px;
+    margin-top: 0;
     justify-content: center;
     position: fixed;
 }
 
 .leftSideBar2 .fixed-child {
     position: sticky;
-    top: 0px;
+    top: 0;
     background-color: #242526;
 }
-
 
 .tab-switch {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80px;
+    height: 3.5vw;
     border-bottom: 1px solid #3A3B3C;
-    margin-bottom: 10px;
+    margin-bottom: 0.3vw;
     z-index: 2;
 }
 
@@ -269,12 +279,14 @@ body {
     align-items: center;
     margin: 0;
     padding: 0;
-    padding-left: 22px;
-    padding-right: 22px;
-    margin-left: 10px;
-    border-radius: 7%;
-    height: 50px;
+    padding-left: 0.9vw;
+    padding-right: 0.9vw;
+    margin-left: 0.3vw;
+    border-radius: 0.3vw;
+    height: 2.5vw;
     transition: background-color 0.2s ease;
+    font-size:1.1vw;
+    font-weight:500;
 }
 
 .tab-buttons:hover {
@@ -282,20 +294,20 @@ body {
 }
 
 .link-buttons {
-    height: 60px;
+    height: 2.8vw;
     display: flex;
-    padding-left: 5px;
+    padding-left: 0.2vw;
     justify-content: left;
     align-items: center;
-    font-size: xx-large;
-    border-radius: 8%;
+    font-size: 1.6vw;
+    border-radius: 0.7vw;
     transition: background-color 0.2s ease;
 }
 
 .link-buttons-unclickable {
-    height: 60px;
+    height: 6vh;
     display: flex;
-    padding-left: 5px;
+    padding-left: 0.2vw;
     justify-content: left;
     align-items: center;
     font-size: xx-large;
@@ -319,9 +331,9 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #3A3B3C;
-    padding-left: 5px;
+    padding-left: 0.2vw;
     justify-content: flex-start;
-    font-size: x-large;
+    font-size: 1.2vw;
 }
 
 .discovery-title {
@@ -492,47 +504,27 @@ label {
     margin-top: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styles for Create Post Panel */
 .content-area {
+    margin: 0;
+    padding: 0;
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    padding: 80px 325px;
-    height: 800px;
+    align-items: center;
+    flex-direction: column;
+    width: 84.3vw;
+    height: 100vh;
+    left: 15.6vw;
+    top: 2.55vw !important;
+    background-color: #18191A;
 }
 
 .create-post {
     background-color: #242526;
-    padding: 10px;
-    position: absolute;
-    border-radius: 10px;
+    padding: 0.4vw;
+    margin: 1vw;
+    border-radius: 0.75vw;
     width: 80vw;
-    height: 13%;
+    height: 10vw;
 }
 
 #profile-picture {

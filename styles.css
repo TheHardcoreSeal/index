@@ -4,7 +4,7 @@ body, html {
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -17,6 +17,7 @@ body, html {
 
 
 body {
+    font-size: 1vw;
     font-family: "Segoe UI";
     background-color: #18191A;
     margin: 0;
@@ -29,7 +30,8 @@ body {
     position: fixed;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    grid-template-columns: 1fr 3.5fr 1fr;
     background-color: #242526;
     height: 2.55vw;
     z-index: 1000;
@@ -141,14 +143,14 @@ body {
 
 .Searchbar::placeholder {
     color: #656668;
+    font-size: 0.7vw;
 }
 
 .search-container {
-    display: flex;
-    align-items: center;
     position: relative;
     display: inline-block;
-    margin-left: 0.8vw;
+    margin-left: 0.3vw;
+    width: 12vw;
 }
 
 .Searchbar {
@@ -157,9 +159,9 @@ body {
     padding-left: 1.8vw;
     background-color: #3A3B3C;
     border-radius: 5vw;
-    border: 2px solid #3A3B3C;
     outline: none;
     color: #B2B2B2;
+    border-width: 0;
 }
 
 .search-container::before {
@@ -176,16 +178,16 @@ body {
 #facebookLogoButton {
     cursor: pointer;
     margin-left: 0.3vw;
-    float: left;
-    background-color: white;
-    height: 4.5vh;
+    background-color: transparent;
+    height: 2.4vh;
     width: 2.4vw;
     padding: 0;
-    border-radius: 2.5vw;
+    border-radius: 0.5vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2vw;
+    font-size: 2.3vw;
+    border: none;
 }
 
 #facebookLogoButton i {
@@ -237,15 +239,12 @@ body {
     top: 2.55vw;
     width: 15vw;
     left: 0;
-    height: calc(100vw - 2.55vw);
+    height: 100vh;
     background-color: #242526;
     color: #fff;
     padding: 0.3vw;
     padding-top: 0;
     overflow-y: auto;
-
-    scrollbar-width: thin;
-    scrollbar-color: #38393a #242526;
 }
 
 .leftSideBar2::-webkit-scrollbar {
@@ -260,7 +259,6 @@ body {
 
 .leftSideBar2 .fixed-child {
     position: sticky;
-    top: 0;
     background-color: #242526;
 }
 
@@ -269,6 +267,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 3.5vw;
+    padding: 0;
     border-bottom: 1px solid #3A3B3C;
     margin-bottom: 0.3vw;
     z-index: 2;
@@ -305,13 +304,12 @@ body {
 }
 
 .link-buttons-unclickable {
-    height: 6vh;
+    height: 3vw;
     display: flex;
     padding-left: 0.2vw;
     justify-content: left;
     align-items: center;
-    font-size: xx-large;
-    border-radius: 8%;
+    font-size: 2vw;
 }
 
 .link-buttons:hover {
@@ -334,14 +332,16 @@ body {
     padding-left: 0.2vw;
     justify-content: flex-start;
     font-size: 1.2vw;
+    min-height: 3vw;
+    border-radius: 0.2vw;
+    margin-bottom: 0.3vw;
 }
 
 .discovery-title {
     display: flex;
     align-items: center;
-    min-height: 60px;
     justify-content: left;
-    font-size: large;
+    font-size: 1vw;
 }
 
 .inner-content {
@@ -359,32 +359,34 @@ body {
     display: flex;
     justify-content: left;
     align-items: start;
-    margin-top: 60px;
-    z-index: 999999;
+    z-index: 9999;
 }
 
 .overlay-content {
+    position: absolute;
+    margin-top: 2.55vw;
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 326px;
+    width: 15.8vw;
+    height: 16vw;
     background-color: #242526;
-    border-radius: 2%;
+    border-radius: 0.6vw;
 }
 
 .panel-top {
     display: flex;
     justify-content: left;
     background-color: #242526;
-    border-radius: 2%;
+    padding: 0.2vw;
     border-bottom: 1px solid #3A3B3C;
-    padding-bottom: 8px;
+    padding-bottom: 0.5vw;
+    margin-bottom: 0.5vw;
 }
 
 .drag-panels {
     display: flex;
     align-items: center;
-    height: 40px;
+    height: 2.5vw;
     margin: 0;
     background-color: #3A3B3C;
 }
@@ -398,9 +400,9 @@ input[type="checkbox"] {
     -moz-appearance: none;
     appearance: none;
     border: 1px solid #ccc;
-    height: 20px;
-    width: 20px;
-    border-radius: 4px;
+    height: 1.2vw;
+    width: 1.2vw;
+    border-radius: 0.2vw;
     outline: none;
     cursor: pointer;
     margin-right: 5px;
@@ -416,11 +418,11 @@ label {
     align-items: center;
     font-family: 'Segoe UI';
     font-weight: 500;
-    font-size: large;
+    font-size: 1vw;
     color: #FFFFFF;
     cursor: pointer;
     white-space: nowrap;
-    padding-left: 5px;
+    padding-left: 0.4vw;
 }
 
 .friends-online {
@@ -432,9 +434,9 @@ label {
     display: flex;
     align-items: center;
     justify-content: left;
-    font-size: large;
+    font-size: 1vw;
     margin: 0 !important;
-    padding: 0;
+    padding: 0 !important;
 }
 
 .friends p {
@@ -448,10 +450,10 @@ label {
 }
 
 .user-image {
-    width: 2em;
-    height: 2em;
+    width: 2vw;
+    height: 2vw;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 2vw;
     margin: 0;
     padding: 0;
 }
@@ -463,12 +465,12 @@ label {
 
 .online-indicator {
     position: absolute;
-    bottom: 4px;
+    bottom: 0.3vw;
     right: 0;
-    width: 10px;
-    height: 10px;
+    width: 0.5vw;
+    height: 0.5vw;
     background-color: #4CAF50;
-    border-radius: 50%;
+    border-radius: 2vw;
     border: 1px solid #fff;
 }
 
@@ -481,15 +483,15 @@ label {
     display: flex;
     align-items: center;
     justify-content: left;
-    font-size: large;
+    font-size: 1vw;
     margin: 0 !important;
     padding: 0;
-    height: 30px;
-    padding-left: 10px;
-    border-radius: 10px;
-    margin-top: 2px !important;
+    height: 1.8vw;
+    padding-left: 0.7vw;
+    border-radius: 0.5vw;
+    margin-top: 0.15vw !important;
     background-color: #393a3b;
-    font-weight: 200px;
+    font-weight: 300;
 }
 
 .event-container:first-child {
@@ -497,11 +499,11 @@ label {
 }
 
 .event-container:last-child {
-    margin-bottom: 5px;
+    margin-bottom: 0.4vw;
 }
 
 .page-text {
-    margin-top: 10px;
+    margin-top: 0.7vw;
 }
 
 .content-area {
@@ -528,11 +530,11 @@ label {
 }
 
 #profile-picture {
-    margin-left: 0px;
+    margin-left: 0;
     position: absolute;
-    margin-top: -2.5px;
+    margin-top: -0.2vw;
     color: white;
-    font-size: 50px;
+    font-size: 2.6vw;
     transition: color 0.3s ease;
 }
 
@@ -542,7 +544,7 @@ label {
 
 
 .create-post-content {
-    margin-left: 70px;
+    margin-left: 3.3vw;
     position: relative;
 }
 
@@ -758,10 +760,11 @@ label {
 }
 
 .feedpost {
+    margin: 0;
     display: flex;
     flex-direction: column;
     background-color: #242526;
-    margin-top: 18vh;
+    margin-top: 2vh;
     width: 80vw;
     margin-bottom: 50px;
     border-radius: 10px;
@@ -793,14 +796,15 @@ label {
 
 .like-comment-share-feed{
     display: flex;
+    font-size: 1vw !important;
     flex-direction: row;
     font-size: medium !important;
     font-weight: 500 !important;
     align-items:center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0.7vw;
     color: #727274;
-    padding-bottom: 10px;
+    padding-bottom: 0.7vw;
     border-bottom: 2px solid #3A3B3C;
     user-select: none;
 }

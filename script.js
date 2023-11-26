@@ -36,13 +36,15 @@ $( function() {
 
 document.getElementById("comment").addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
-        sendComment();
+        event.preventDefault();
+        sendComment(event);
     }
 });
 
-function sendComment() {
+function sendComment(event) {
     var username = "Username";
-    var commentText = document.getElementById("comment").value;
+    var commentInput = event.target.previousElementSibling;
+    var commentText = commentInput.value;
     var imgSrc = "fa-solid fa-circle-user";
 
     var commentDiv = document.createElement("div");
@@ -63,13 +65,36 @@ function sendComment() {
         </div>
     `;
 
-    var locaterDiv = document.getElementById("locater");
+    var locaterDiv = commentInput.closest("#locater");
+    var inputPositionBefore = commentInput.getBoundingClientRect().top;
     locaterDiv.parentNode.insertBefore(commentDiv, locaterDiv);
-
-    document.getElementById("comment").value = "";
-
-    commentDiv.scrollIntoView({behavior: "smooth"});
+    var inputPositionAfter = commentInput.getBoundingClientRect().top;
+    if (inputPositionAfter !== inputPositionBefore) {
+        window.scrollBy(0, inputPositionAfter - inputPositionBefore);
+    }
+    commentInput.value = "";
 }
+
+let isAdding = false;
+let triggerDistance = 10;
+
+window.addEventListener('scroll', function() {
+    if (isAdding) return;
+    let mainContent = document.querySelector('#mainContent');
+    let reference = document.querySelector('#reference');
+    let scrollBottom = mainContent.scrollTop + mainContent.clientHeight;
+    let mainContentBottom = mainContent.scrollHeight;
+    if (mainContentBottom - scrollBottom < triggerDistance) {
+        isAdding = true;
+        let clone = reference.cloneNode(true);
+        mainContent.appendChild(clone);
+        setTimeout(() => { isAdding = false; }, 1000);
+    }
+});
+
+
+
+
 
 
 

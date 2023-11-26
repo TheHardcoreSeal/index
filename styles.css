@@ -522,7 +522,7 @@ label {
     align-items: center;
     flex-direction: column;
     width: 84vw;
-    height: 100vh;
+    height: auto;
     left: 15.6vw;
     top: 2.55vw !important;
     background-color: #18191A;
@@ -778,7 +778,7 @@ label {
     background-color: #242526;
     margin-top: 2vh;
     width: 80vw;
-    margin-bottom: 4vw;
+    margin-bottom: 1vw;
     border-radius: 0.8vw;
     padding-bottom: 1vw;
 }

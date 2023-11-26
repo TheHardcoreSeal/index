@@ -868,6 +868,18 @@ label {
     background-color: #3A3B3C;
 }
 
+.comment-blockFS{
+    margin-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-radius: 1vw;
+    max-width: 40vw;
+    min-width: 5vw;
+    max-height: 10vw;
+    min-height: 3vw;
+    background-color: #3A3B3C;
+}
+
 .comment-information{
     user-select: none;
     display: flex;
@@ -887,6 +899,10 @@ label {
     height: 2vw;
 }
 
+#comment2::placeholder{
+    text-align: left;
+}
+
 .user-comment-input{
     width: 70vw;
     height: 2vw;
@@ -898,9 +914,39 @@ label {
     border-width: 0;
 }
 
+.user-comment-inputFS{
+    width: 40vw;
+    height: 6vw;
+    padding-left: 0.5vw;
+    background-color: #3A3B3C;
+    border-radius: 0.8vw;
+    outline: none;
+    color: #B2B2B2;
+    border-width: 0;
+}
+
+.user-comment-input2{
+    width: 40vw;
+    height: 6vw;
+    padding-left: 0.5vw;
+    background-color: #3A3B3C;
+    border-radius: 0.8vw;
+    outline: none;
+    color: #B2B2B2;
+    border-width: 0;
+    line-height: 1vw;
+}
+
 .user-comment-input::placeholder {
     color: #656668;
     font-size: 1vw;
+}
+
+.user-comment-input2::placeholder {
+    color: #656668;
+    font-size: 1vw;
+    margin-top: -5vw !important;
+    padding-top: -5vw !important;
 }
 
 #send-arrow{
@@ -1102,4 +1148,8 @@ label {
     height: 100vh;
     background-color: #242526;
 }
-  
+
+.commentsad{
+    overflow-y: auto;
+    height: 25vw;
+}

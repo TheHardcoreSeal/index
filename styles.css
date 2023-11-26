@@ -968,3 +968,15 @@ label {
     height: 3vw;
     width: 14vw;
 }
+
+#seperate-profile-picture {
+    margin-left: 0;
+    position: absolute;
+    color: white;
+    font-size: 2.6vw;
+    transition: color 0.3s ease;
+}
+
+#seperate-profile-picture:hover {
+    color: #005eff;
+}

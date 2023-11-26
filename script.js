@@ -21,8 +21,6 @@ $( function() {
         }
     });
     $( "#sortable" ).disableSelection();
-
-    // Add change event listener to checkboxes
     $( "#sortable input[type='checkbox']" ).change(function() {
         var id = $(this).closest('div').attr('id');
         var isChecked = $(this).is(':checked');
@@ -34,10 +32,14 @@ $( function() {
     });
 } );
 
-document.getElementById("comment").addEventListener("keyup", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        sendComment(event);
+document.addEventListener('DOMContentLoaded', function () {
+    if (window.location.pathname.endsWith('index.html')) {
+        document.getElementById('comment').addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                sendComment(event);
+            }
+        });
     }
 });
 
@@ -92,10 +94,13 @@ window.addEventListener('scroll', function() {
     }
 });
 
+function videoClick(){
+    window.location.href = "video.html";
+}
 
-
-
-
+function homeClick(){
+    window.location.href = "index.html";
+}
 
 
 function xPanelClick(){

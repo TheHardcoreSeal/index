@@ -19,9 +19,12 @@
                     <i class="fa-brands fa-facebook fa-2xl" style="color: #0866ff;"></i>
                 </button>
             </div>
-            <form class="search-container">
-                <input type="text" placeholder="Search Facebook" class="Searchbar">
-            </form>
+
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                </div>
+
+            
         </div>
 
         <div class="center-side">
@@ -32,16 +35,16 @@
 
             <div class="vertical-line"></div>
 
-            <div class="center-buttons button-class" onclick="videoClick()">
-                <i class="fa-solid fa-video fa-2xl" style="color: #ffffff;"></i>
-                <p style="font-size: 24px; margin-left: 10px;">Video</p>
+            <div class="center-buttons button-class underline" onclick="videoClick()">
+                <i class="fa-solid fa-video fa-2xl" style="color: #0866ff;"></i>
+                <p style="color: #0866ff; font-size: 24px; margin-left: 10px;">Video</p>
             </div>
 
             <div class="vertical-line"></div>
 
-            <div class="center-buttons button-class underline" onclick="homeClick()">
-                <i class="fa-solid fa-house fa-2xl" style="color: #0866FF;"></i>
-                <p style="color: #0866FF; font-size: 24px; margin-left: 10px;">Home</p>
+            <div class="center-buttons button-class" onclick="homeClick()">
+                <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px; margin-left: 10px;">Home</p>
             </div>
 
             <div class="vertical-line"></div>
@@ -72,61 +75,77 @@
     </div>
 	
 	<!--Left Side Panel v----------------------------------------------------------------------------------------------------->
-    <div id="side1" class="leftSideBar" style="visibility: visible;">
+         
+        <div id="side1" class="leftSideBar" style="visibility: visible;">
+            <div style="display: flex; flex-direction: row;">
+            <h2>Video</h2>
+                <div class="icon-background button-class" onclick="settingsClick()">
+                    <i class="fa-solid fa-gear fa-2xl " style="color: #ffffff;"></i>
+                </div> 
+                </div>
+            
         
-	<div class="videopart">
-	
-		<title>Video</title>
 		<form class="search-container">
                 <input type="text" placeholder="Search Facebook" class="Searchbar">
         </form>
-			
-		
-		<div id="side1" class="leftSideBar" style="visibility: visible;">
 
-        <div class="link-buttons button-class" onclick="">
-            
+        <div class="link-buttons button-class" onclick="videohomeClick()">
+            <i class="fa-solid fa-house" style="color: #b2b2b2;"></i>
             <p style="font-size: x-large; margin-left: 15px;">Home</p>
         </div>
 
-        <div class="link-buttons button-class" onclick="">
-            
+        <div class="link-buttons button-class" onclick="liveClick()">
+            <i class="fa-solid fa-video" style="color: #b2b2b2;"></i>
             <p style="font-size: x-large; margin-left: 10px;">Live</p>
         </div>
 
-        <div class="link-buttons button-class" onclick="">
-            
+        <div class="link-buttons button-class" onclick="reelClick()">
+            <i class="fa-solid fa-camera-retro" style="color: #b2b2b2;"></i>
             <p style="font-size: x-large; margin-left: 15px;">Reels</p>
         </div>
 
-        <div class="link-buttons button-class" onclick="">
-            
+        <div class="link-buttons button-class" onclick="showClick()">
+            <i class="fa-solid fa-clapperboard" style="color: #b2b2b2;"></i>
             <p style="font-size: x-large; margin-left: 15px;">Shows</p>
         </div>
 
-        <div class="link-buttons button-class" onclick="">
-            
+        <div class="link-buttons button-class" onclick="exploreClick()">
+            <i class="fa-solid fa-rocket" style="color: #b2b2b2;"></i>
             <p style="font-size: x-large; margin-left: 18px;">Explore</p>
         </div>
 		
-		<div class="link-buttons button-class" onclick="">
-            
+		<div class="link-buttons button-class" onclick="savedClick()">
+            <i class="fa-solid fa-bookmark" style="color: #b2b2b2;"></i>
             <p style="font-size: x-large; margin-left: 18px;">Saved videos</p>
         </div>
-
+</div>
       
 	   <!----Main feed --->
 		<div class="content-area" id="mainContent">
         <section>
 
-            <div class = "video">
-                <video width="320" height="240" autoplay>
-					<source src="Images/video.mp4" type="video/mp4">
-					
-                <p style="padding-left: 10px; margin-top: 1%; color: #FFFFFF; font-weight:400 !important; font-size:x-large;"> 
-                    I Painted the Same Painting in 1 Hour, 10 Hours and 100 Hours!
-                </p>
-              
+            <div class = "feedpost" id = "reference">
+                <div class = "post-information">
+
+                    <div class = "feedpost-name" style="font-size: 1vw;">
+                        <p style="margin: 0;color: #FFFFFF; font-weight: bold;">Group C</p>
+                        <div style="display: flex; flex-direction: row;">
+                            <p style="margin: 0;color: #B2B2B2 ; ">Suggested for you</p>   
+                            <p style="color: #B2B2B2; margin: 0; font-weight: bold;">-November 29 at 1:47PM</p>               
+                        </div>
+                        <p style="color: #f9f9f9; margin: 0; font-weight: bold;">
+                            I Painted the Same Painting in 1 Hour, 10 Hours and 100 Hours!</p>
+                    </div>
+                    <video width="320" height="240" poster="/images/w3schools_green.jpg" controls>
+
+                        <source src="Images/video.mp4" type="video/mp4">
+                        <source src="Images/video.mp4" type="video/ogg">
+                        
+                     </video>
+                    
+                </div>
+                
+ 
             </div>
 
 <!--Keep this as the last thing before body ends-->

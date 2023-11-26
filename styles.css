@@ -211,6 +211,9 @@ body {
     padding: 0.3vw;
     padding-top: 0;
     overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #38393a #242526;
 }
 
 .leftSideBar::-webkit-scrollbar {
@@ -245,7 +248,11 @@ body {
     padding: 0.3vw;
     padding-top: 0;
     overflow-y: auto;
+    
+    scrollbar-width: thin;
+    scrollbar-color: #38393a #242526;
 }
+
 
 .leftSideBar2::-webkit-scrollbar {
     width: 0;
@@ -332,7 +339,6 @@ body {
     padding-left: 0.2vw;
     justify-content: flex-start;
     font-size: 1.2vw;
-    min-height: 3vw;
     border-radius: 0.2vw;
     margin-bottom: 0.3vw;
 }

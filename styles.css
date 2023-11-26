@@ -528,21 +528,18 @@ label {
     background-color: #18191A;
 }
 
-/* CREATE POST STUFF (NEEDS TO BE FIXED) */
-
 .create-post {
     background-color: #242526;
-    padding: 0.4vw;
     margin: 1vw;
-    border-radius: 0.8;
-    width: 80vw;
-    height: 10vw;
+	border-radius: 0.8vw;
+    height: 7vw;
+	width: 80vw;
 }
 
 #profile-picture {
-    margin-left: 0;
+    margin-left: 1.5vw;
     position: absolute;
-    margin-top: -0.2vw;
+    margin-top: 0.5vw;
     color: white;
     font-size: 2.6vw;
     transition: color 0.3s ease;
@@ -554,23 +551,26 @@ label {
 
 
 .create-post-content {
-    margin-left: 3.3vw;
+    margin: 0.8vw 1vw 0.8vw 6.4vw;
     position: relative;
+	width: 72.5vw;
 }
 
 .create-post-hr {
     border: none;
     border-top: 2px solid #393a3b;
+	width: 77vw;
 }
 
 .buttons-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+	margin-left: 1vw;
 }
 
 .buttons-container span {
-    margin-left: 0.4vw;
+	margin-left: 0.4vw;
     position: relative;
     top: -0.4vw;
     font-size: 1vw;
@@ -639,11 +639,11 @@ label {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #242526;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 1.5vw 1.5vw 0vw;
+    border-radius: 0.5vw;
     z-index: 2;
-    width: 300px;
-    height: 260px;
+    width: 25vw;
+    height: 23vw;
 }
 
 .floating-panel.show {
@@ -669,7 +669,8 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 1vw;
+	font-weight: 600;
 }
 
 .panel-header .close-button {
@@ -677,13 +678,13 @@ label {
     border-radius: 50%;
     background-color: #393a3b;
     color: white;
-    width: 25px;
-    height: 25px;
+    width: 2vw;
+    height: 2vw;
     display: flex;
-    margin-top: -15px;
+    margin-top: -0.9vw;
     justify-content: center;
     align-items: center;
-    margin-right: -15px;
+    margin-right: -0.9vw;
     transition: background-color 0.2s ease;
 }
 
@@ -695,18 +696,18 @@ label {
     text-align: center;
     margin: 0;
     flex-grow: 1;
-    margin-top: -15px;
+    margin-top: -0.9vw;
     color: #FFFFFF;
-    font-size: 17px;
+    font-size: 1.3vw;
     user-select: none;
 }
 
 .line-divider {
-    width: calc(113.5%);
-    margin-left: -20px;
+    width: 28vw;
     border: none;
+	margin-left: -1.5vw;
     border-top: 1px solid #393a3b;
-    margin-top: -2px
+    margin-top: -0.2vw;
 }
 
 .user-info {
@@ -714,9 +715,9 @@ label {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 33px;
-    margin-top: -5px;
-    padding-bottom: 10px;
+    margin-left: 2.4vw;
+    margin-top: -0.2vw;
+    padding-bottom: 0.8vw;
     color: #FFFFFF;
 }
 
@@ -725,8 +726,8 @@ label {
 }
 
 .main-page #profile-picture {
-    margin-top: 5px;
-    margin-left: -10px;
+    margin-top: 0.1vw;
+    margin-left: -0.6vw;
 }
 
 .main-page textarea {
@@ -744,12 +745,12 @@ label {
 .post-btn {
     width: 105%;
     border-radius: 5px;
-    margin-top: 5px;
     color: #FFFFFF;
     background-color: #393a3b;
     border: none;
     margin-left: -8px;
-    padding: 5px 0px;
+    padding: 0.4vw 1vw;
+	margin-top: 5.5vw;
     transition: background-color 0.2s ease;
 }
 
@@ -766,10 +767,8 @@ label {
     border: none;
     font-size: 10px;
     margin-top: 3px;
-    width: 28%;
+    width: 4.5vw;
 }
-
-/* CREATE POST STUFF (NEEDS TO BE FIXED) */
 
 .feedpost {
     margin: 0;
@@ -891,81 +890,4 @@ label {
 
 #send-arrow:hover{
     color: #005eff;
-}
-
-.filter-content{
-    cursor: pointer;
-    user-select: none;
-    font-size: 1.2vw;
-    margin-top: 2vh;
-    display: flex;
-    flex-direction: row;
-    color: white;
-    margin-left: 68vw;
-}
-
-.content-filter-panel{
-    position: absolute;
-    background-color: #242526;
-    display: flex;
-    flex-direction: column;
-    right: 0;
-    margin: 2vw;
-    margin-top: 18vw;
-
-    width: 30vw;
-    height: 25.1vw;
-}
-
-.content-title{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    height: 4vw;
-    border-bottom: 1px solid #393a3b;
-}
-
-.categories{
-    user-select: none;
-    display: flex;
-    flex-direction: row;
-    font-size: 1.5vw;
-    font-weight: 500;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-    
-}
-
-.options{
-    color: #B2B2B2;
-    font-size: 1vw;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-.bottom-content{
-    display: flex;
-    flex-direction: row;
-    border-top: 1px solid #38393a;
-    width: 100%;
-    height: 4vw;
-    align-items: center;
-    justify-content: center;
-}
-
-.content-buttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1vw;
-    font-weight: bold;
-    border-radius: 1vw;
-    background-color: #3A3B3C;
-    height: 3vw;
-    width: 14vw;
 }

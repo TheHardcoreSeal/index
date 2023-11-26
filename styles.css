@@ -980,3 +980,48 @@ label {
 #seperate-profile-picture:hover {
     color: #005eff;
 }
+
+.messenger-content{
+    background-color: #242526;
+    width: 20vw;
+    height: 33vw;
+    margin-top: 3vw;
+    margin-left: 79vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5vw;
+}
+
+.messenger-title{
+    width: 100%;
+    height: 4vw;
+}
+
+.chat-image {
+    width: 2.75vw;
+    height: 2.75vw;
+    object-fit: cover;
+    border-radius: 2vw;
+    margin: 0;
+    padding: 0;
+    margin-left: 0.5vw;
+}
+
+.person{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vw;
+}
+
+.messenger-end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #393a3b;
+    width: 100%;
+    height: 3vw;
+    font-size: 0.8vw;
+    color: #525455;
+    user-select: none;
+}

@@ -769,6 +769,107 @@
                 </div>
             </div>
 
+            <div id="overlayMessenger" class="overlay" style="visibility: hidden;">
+                <div class = "messenger-content">
+                    <div class = "messenger-title">
+                        <div style="display: flex; flex-direction: row; align-items:start ; justify-content: left;">
+                            <div class="x-background button-class" style="left: 0; margin-left: 0.5vw; margin-top: 0.7vw; margin-right: 1vw; " onclick="xPanelClickMessenger()">
+                                <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                            <p style=" margin: 0; font-weight: bold !important; font-size: 2vw; color: white; margin-top: 0.4vw;">Chats</p>
+                        </div>
+                    </div>
+
+                    <div class = "messenger-search" style="margin-left: 0.2vw;">
+                        <form class="search-container">
+                            <input type="text" placeholder="Search Messenger" class="Searchbar" style="font-size: 0.8vw; width: 17vw;">
+                        </form>
+                    </div>
+
+                    <div style="color: #b2b2b2; font-size: 0.8vw; display: flex; flex-direction: row; font-weight: 400; user-select: none;">
+                        <p style="margin-left: 15.5vw;">Verified</p>
+                        <i class="fa-solid fa-caret-up fa-rotate-180" style="margin-bottom: 1vw; margin-left: 0.2vw;"></i>
+                    </div>
+
+                    <div class = "people" style="margin-top: -0.5vw;">
+                        <div class = "person">
+                            <img src="Images\Johnny-Depp.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                            <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                                <p style="margin: 0; font-weight: bold;">Johnny Depp</p>
+                                <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                                    <p style="margin: 0;">You: luv ur stuff man. - </p>
+                                    <p style="font-weight: bold; margin: 0;"> 1y</p>
+                                </div>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check" style="margin-left:0.7vw; margin-top: 0.5vw; font-size: 1.5vw;"></i>
+                        </div>
+
+                        <div class = "person">
+                            <img src="Images\Albert-Einstein.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                            <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                                <p style="margin: 0; font-weight: bold;">Albert Einstein</p>
+                                <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                                    <p style="margin: 0;">Albert: Yo I revived wassup G! -</p>
+                                    <p style="font-weight: bold; margin: 0;"> 3y</p>
+                                </div>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check" style="margin-left:0.7vw; margin-top: 0.5vw; font-size: 1.5vw;"></i>
+                        </div>
+
+                        <div class = "person">
+                            <img src="Images\Hugh-Jackman.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                            <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                                <p style="margin: 0; font-weight: bold;">Hugh Jackman</p>
+                                <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                                    <p style="margin: 0;">You: agreed - </p>
+                                    <p style="font-weight: bold; margin: 0;"> 4y</p>
+                                </div>
+                            </div>
+
+                            <i class="fa-solid fa-circle-check" style="margin-left:0.7vw; margin-top: 0.5vw; font-size: 1.5vw;"></i>
+                        </div>
+
+                        <div class = "person">
+                            <img src="Images\bossman.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                            <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                                <p style="margin: 0; font-weight: bold;">Bossman</p>
+                                <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                                    <p style="margin: 0;">Bossman: I thought you were sic... - </p>
+                                    <p style="font-weight: bold; margin: 0;"> 1h</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "person">
+                            <img src="Images\billy-jean.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                            <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                                <p style="margin: 0; font-weight: bold;">Billy Jean</p>
+                                <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                                    <p style="margin: 0;">Billy: I told you I'm not your lover... - </p>
+                                    <p style="font-weight: bold; margin: 0;"> 3d</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class = "person">
+                            <img src="Images\Ratvinder-Grewal.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                            <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                                <p style="margin: 0; font-weight: bold;">Professor</p>
+                                <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                                    <p style="margin: 0;">You: please respond to my emai... -</p>
+                                    <p style="font-weight: bold; margin: 0;"> 905y</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "messenger-end">
+                        <p>See all in Messenger</p>
+                    </div>
+                </div>
+            </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

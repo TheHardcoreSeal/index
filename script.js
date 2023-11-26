@@ -107,9 +107,6 @@ function xPanelClick(){
     document.getElementById('overlay').style.visibility = 'hidden';
 }
 
-function xPanelClickContent(){
-    document.getElementById('overlayContent').style.visibility = 'hidden';
-}
 
 function editPanelsClick(){
     document.getElementById('overlay').style.visibility = 'visible';
@@ -117,6 +114,18 @@ function editPanelsClick(){
 
 function filterContent(){
     document.getElementById('overlayContent').style.visibility = 'visible';
+}
+
+function xPanelClickContent(){
+    document.getElementById('overlayContent').style.visibility = 'hidden';
+}
+
+function messengerClick(){
+    document.getElementById('overlayMessenger').style.visibility = 'visible';
+}
+
+function xPanelClickMessenger(){
+    document.getElementById('overlayMessenger').style.visibility = 'hidden';
 }
 
 //add functionality for making background gray when clicked

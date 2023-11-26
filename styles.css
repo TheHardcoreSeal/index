@@ -205,7 +205,7 @@ body {
     top: 2.55vw;
     width: 15vw;
     left: 0;
-    height: 100vh;
+    height: calc(100vh - 2.55vw);
     background-color: #242526;
     color: #fff;
     padding: 0.3vw;
@@ -242,7 +242,7 @@ body {
     top: 2.55vw;
     width: 15vw;
     left: 0;
-    height: 100vh;
+    height: calc(100vh - 2.55vw);
     background-color: #242526;
     color: #fff;
     padding: 0.3vw;
@@ -521,7 +521,7 @@ label {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 84.3vw;
+    width: 84vw;
     height: 100vh;
     left: 15.6vw;
     top: 2.55vw !important;

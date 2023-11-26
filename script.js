@@ -94,6 +94,21 @@ window.addEventListener('scroll', function() {
     }
 });
 
+function zoom() {
+    var img = document.getElementById("dynamic");
+    var overlay = document.getElementById("overlay3");
+    var zoomedImg = document.getElementById("zoomedImg");
+    zoomedImg.src = img.src;
+    overlay.style.display = "block";
+}
+
+function unzoom(event) {
+    if (event.target.id === 'overlay3') {
+        document.getElementById("overlay3").style.display = "none";
+    }
+}
+
+
 function videoClick(){
     window.location.href = "video.html";
 }
@@ -102,11 +117,9 @@ function homeClick(){
     window.location.href = "index.html";
 }
 
-
 function xPanelClick(){
     document.getElementById('overlay').style.visibility = 'hidden';
 }
-
 
 function editPanelsClick(){
     document.getElementById('overlay').style.visibility = 'visible';
@@ -116,8 +129,16 @@ function filterContent(){
     document.getElementById('overlayContent').style.visibility = 'visible';
 }
 
+function filterContent2(){
+    document.getElementById('overlayContent2').style.visibility = 'visible';
+}
+
 function xPanelClickContent(){
     document.getElementById('overlayContent').style.visibility = 'hidden';
+}
+
+function xPanelClickContent2(){
+    document.getElementById('overlayContent2').style.visibility = 'hidden';
 }
 
 function messengerClick(){
@@ -126,6 +147,10 @@ function messengerClick(){
 
 function xPanelClickMessenger(){
     document.getElementById('overlayMessenger').style.visibility = 'hidden';
+}
+
+function fullscreenPost(){
+    window.location.href = "fullscreen.html";
 }
 
 //add functionality for making background gray when clicked

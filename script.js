@@ -107,8 +107,16 @@ function xPanelClick(){
     document.getElementById('overlay').style.visibility = 'hidden';
 }
 
+function xPanelClickContent(){
+    document.getElementById('overlayContent').style.visibility = 'hidden';
+}
+
 function editPanelsClick(){
     document.getElementById('overlay').style.visibility = 'visible';
+}
+
+function filterContent(){
+    document.getElementById('overlayContent').style.visibility = 'visible';
 }
 
 //add functionality for making background gray when clicked

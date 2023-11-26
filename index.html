@@ -539,6 +539,11 @@
 
 <!----------------------------------------CREATE POST STUFF (NEEDS TO BE FIXED)---------------------------------------->
 
+            <div class = "filter-content" onclick="filterContent()">
+                <p style="margin: 0; padding: 0;">Filter Content</p>
+                <i class="fa-solid fa-filter" style="margin-left: 0.5vw; margin-top: 0.2vw;"></i>
+            </div>
+
             <div class = "feedpost" id = "reference">
                 <div class = "post-information">
                     <img src="Images\group c.png" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
@@ -583,7 +588,7 @@
                                 <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
                                 <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
                                     in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
-                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 100 hours!</p>
+                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 200 hours in the project!</p>
                             </div>
                         </div>
                         <div class = "comment-information">
@@ -649,7 +654,7 @@
                                 <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
                                 <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
                                     in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
-                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 100 hours!</p>
+                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 200 hours in the project!</p>
                             </div>
                         </div>
                         <div class = "comment-information">
@@ -667,7 +672,100 @@
                             <i id = "send-arrow" class="fa-solid fa-play fa-lg button-class" onclick="sendComment(event)"></i>
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div id="overlayContent" class="overlay" style="visibility: hidden;">
+                <div class = "content-filter-panel">
+                    <div class = "content-title">
+                        <div class="x-background button-class" style="left: 0; margin-left: 0.5vw;"
+                        onclick="xPanelClickContent()">
+                        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                    </div>
+
+                    <p style="font-size: 1.7vw; font-weight: 600; margin-left: 7.5vw; color:white;"> Content Filter </p>
+                    </div>
+                    <div class = "categories">
+                        <p>Audience</p> <i title="intended audience of the poster (uncheck all for default)" class="fa-sm button-class fa-solid fa-circle-info"style="margin-left: 0.5vw;"></i>
+                        <p style="margin-left: 3.5vw;">Source</p> <i title="Where the content comes from (uncheck all for normal algorithm)"class="fa-sm button-class fa-solid fa-circle-info" style=" margin-right: 3.5vw;margin-left: 0.5vw;"></i>
+                        <p>Content</p> <i title="type of content, such as photo or video content" class="fa-sm button-class fa-solid fa-circle-info" style="margin-left: 0.5vw;"></i>
+                    </div>
+
+                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                        <div class = "options">
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Friends</p>
+                            </label>
+        
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Groups</p>
+                            </label>
+        
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Only Me</p>
+                            </label>
+
+                            <label style="font-weight: 400; color: #242526;; font-size: 1vw; user-select: none; height: 3vw;">
+                                <input type="checkbox" style="color: #242526;; background-color: #242526;; border-color: #242526;;">
+                                <p style="margin-left:0.2vw; user-select: none;">Only Me</p>
+                            </label>
+                        </div>
+
+                        <div class = "options" style="margin-left: 3.8vw;">
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Groups</p>
+                            </label>
+        
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Verified</p>
+                            </label>
+        
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Pages</p>
+                            </label>
+
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Local</p>
+                            </label>
+                        </div>
+
+                        <div class = "options" style=" margin-left: 3vw; margin-right: 1.5vw;">
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Text</p>
+                            </label>
+        
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Photos</p>
+                            </label>
+        
+                            <label style="font-weight: 400; color: #B2B2B2; font-size: 1vw; height: 3vw;">
+                                <input type="checkbox">
+                                <p style="margin-left:0.2vw; user-select: none;">Videos</p>
+                            </label>
+
+                            <label style="font-weight: 400; color: #242526;; font-size: 1vw; user-select: none; height: 3vw;">
+                                <input type="checkbox" style="color: #242526;; background-color: #242526;; border-color: #242526;;">
+                                <p style="margin-left:0.2vw; user-select: none;">Only Me</p>
+                            </label>
+                        </div>
+                    </div>             
+                    <div class = "bottom-content">
+                        <div class = "content-buttons button-class" style="margin-right: 0.5vw;" onclick="xPanelClickContent()">
+                            <p>Apply Filters</p>
+                        </div>
+                        <div class = "content-buttons button-class" style="margin-left: 0.5vw;" onclick="xPanelClickContent()">
+                            <p>Reset to Default</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

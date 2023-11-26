@@ -53,7 +53,7 @@ function sendComment(event) {
     commentDiv.innerHTML = `
         <div>
             <div class = "comment"> 
-                <i onclick="userClick()" id="profile-picture" class=" button-class ${imgSrc}" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw; display: block;"></i>
+                <i onclick="userClick()" id="seperate-profile-picture" class=" button-class ${imgSrc}" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw; display: block;"></i>
                 <div class = "comment-block" style = "margin-left: 3.1vw;">
                     <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >${username}</p>
                     <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">${commentText}</p>

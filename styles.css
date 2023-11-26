@@ -901,6 +901,11 @@ label {
     flex-direction: row;
     color: white;
     margin-left: 68vw;
+    transition: color 0.2s ease;
+}
+
+.filter-content:hover{
+    color: #005eff;
 }
 
 .content-filter-panel{

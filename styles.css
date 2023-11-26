@@ -780,6 +780,7 @@ label {
     width: 80vw;
     margin-bottom: 4vw;
     border-radius: 0.8vw;
+    padding-bottom: 1vw;
 }
 
 .feedpost-name{
@@ -824,5 +825,71 @@ label {
 .comments{
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #3A3B3C;
+}
+
+.comment{
+    width: auto;
+    margin-top: 1vw;
+    margin-left: 0.5vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment-block{
+    margin-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-radius: 1vw;
+    max-width: 70vw;
+    min-width: 5vw;
+    max-height: 10vw;
+    min-height: 3vw;
+    background-color: #3A3B3C;
+}
+
+.comment-information{
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 4vw;
+    margin-top: 0.5vw;
+    color: #B2B2B2;
+}
+
+.user-comment{
+    padding: 0;
+    margin-left: 0.5vw;
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2vw;
+}
+
+.user-comment-input{
+    width: 70vw;
+    height: 2vw;
+    padding-left: 0.5vw;
+    background-color: #3A3B3C;
+    border-radius: 0.8vw;
+    outline: none;
+    color: #B2B2B2;
+    border-width: 0;
+}
+
+.user-comment-input::placeholder {
+    color: #656668;
+    font-size: 1vw;
+}
+
+#send-arrow{
+    position: absolute; 
+    margin-top: 1vw; 
+    left: 74.5vw; 
+    color: white;
+    transition: color 0.3s ease;
+}
+
+#send-arrow:hover{
+    color: #005eff;
 }

@@ -34,6 +34,43 @@ $( function() {
     });
 } );
 
+document.getElementById("comment").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        sendComment();
+    }
+});
+
+function sendComment() {
+    var username = "Username";
+    var commentText = document.getElementById("comment").value;
+    var imgSrc = "fa-solid fa-circle-user";
+
+    var commentDiv = document.createElement("div");
+    commentDiv.innerHTML = `
+        <div>
+            <div class = "comment"> 
+                <i onclick="userClick()" id="profile-picture" class=" button-class ${imgSrc}" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw; display: block;"></i>
+                <div class = "comment-block" style = "margin-left: 3.1vw;">
+                    <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >${username}</p>
+                    <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">${commentText}</p>
+                </div>
+            </div>
+            <div class = "comment-information">
+                <p style="margin: 0; font-weight: 300;">2d</p>
+                <p style="margin: 0; margin-right: 0.8vw; margin-left: 0.8vw; font-weight: 500;">Like</p>
+                <p style="margin: 0; font-weight: 500;">Reply</p>
+            </div>
+        </div>
+    `;
+
+    var locaterDiv = document.getElementById("locater");
+    locaterDiv.parentNode.insertBefore(commentDiv, locaterDiv);
+
+    document.getElementById("comment").value = "";
+
+    commentDiv.scrollIntoView({behavior: "smooth"});
+}
+
 
 
 function xPanelClick(){

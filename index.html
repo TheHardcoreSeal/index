@@ -575,11 +575,33 @@
                 </div>
 
                 <div class = "comments"><!--Not done yet-->
-                    <p style="margin:0.4vw; font-weight: bold !important; color: #B2B2B2;">View more Comments</p>
-
-                    <div> 
-
+                    <p style="margin:0.4vw; font-weight: bold !important; color: #B2B2B2; user-select: none;">View more Comments</p>
+                    <div>
+                        <div class = "comment"> 
+                            <img src="Images\Buddha.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
+                            <div class = "comment-block">
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
+                                    in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
+                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 100 hours!</p>
+                            </div>
+                        </div>
+                        <div class = "comment-information">
+                            <p style="margin: 0; font-weight: 300;">2d</p>
+                            <p style="margin: 0; margin-right: 0.8vw; margin-left: 0.8vw; font-weight: 500;">Like</p>
+                            <p style="margin: 0; font-weight: 500;">Reply</p>
+                        </div>
                     </div>
+
+                    <div id = "locater" class = "user-comment">
+                        <i onclick="userClick()" id="profile-picture" class=" button-class fa-solid fa-circle-user"></i>
+                        <div class = "user-comment-block"> 
+                            <input id = "comment" type="text" placeholder="Write a comment..." class="user-comment-input"
+                            style="margin-left: 3vw; font-size: 1vw !important;">
+                            <i id = "send-arrow" class="fa-solid fa-play fa-lg button-class" onclick="sendComment()"></i>
+                        </div>
+                    </div>
+
                 </div>
             </div>
     </div>

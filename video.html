@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Facebook</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <script src="https://kit.fontawesome.com/e9348bb64a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+	
+<body>
+ <!--Header v----------------------------------------------------------------------------------------------------->
+	
+	<div class="header">
+        <div class="left-side">
+            <div>
+                <button id="facebookLogoButton" onclick="homeClick()">
+                    <i class="fa-brands fa-facebook fa-2xl" style="color: #0866ff;"></i>
+                </button>
+            </div>
+            <form class="search-container">
+                <input type="text" placeholder="Search Facebook" class="Searchbar">
+            </form>
+        </div>
+
+        <div class="center-side">
+            <div class="center-buttons button-class" onclick="marketplaceClick()">
+                <i class="fa-solid fa-store fa-xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px !important; margin-left: 10px;">Marketplace</p>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div class="center-buttons button-class" onclick="videoClick()">
+                <i class="fa-solid fa-video fa-2xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px; margin-left: 10px;">Video</p>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div class="center-buttons button-class underline" onclick="homeClick()">
+                <i class="fa-solid fa-house fa-2xl" style="color: #0866FF;"></i>
+                <p style="color: #0866FF; font-size: 24px; margin-left: 10px;">Home</p>
+            </div>
+
+            <div class="vertical-line"></div>
+
+            <div class="center-buttons button-class" onclick="showFloatingPanel()">
+                <i class="fa-solid fa-circle-plus fa-2xl" style="color: #ffffff;"></i>
+                <p style="font-size: 24px; margin-left: 10px;">Create</p>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="icon-background button-class" onclick="settingsClick()">
+                <i class="fa-solid fa-gear fa-2xl " style="color: #ffffff;"></i>
+            </div>
+
+            <div class="icon-background button-class" onclick="userClick()">
+                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+            </div>
+
+            <div class="icon-background button-class" onclick="notificationClick()">
+                <i class="fa-solid fa-bell fa-2xl" style="color: #ffffff;"></i>
+            </div>
+
+            <div class="icon-background button-class" onclick="messengerClick()">
+                <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+    </div>
+	
+	<!--Left Side Panel v----------------------------------------------------------------------------------------------------->
+    <div id="side1" class="leftSideBar" style="visibility: visible;">
+        
+	<div class="videopart">
+	
+		<title>Video</title>
+		<form class="search-container">
+                <input type="text" placeholder="Search Facebook" class="Searchbar">
+        </form>
+			
+		
+		<div id="side1" class="leftSideBar" style="visibility: visible;">
+
+        <div class="link-buttons button-class" onclick="">
+            
+            <p style="font-size: x-large; margin-left: 15px;">Home</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="">
+            
+            <p style="font-size: x-large; margin-left: 10px;">Live</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="">
+            
+            <p style="font-size: x-large; margin-left: 15px;">Reels</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="">
+            
+            <p style="font-size: x-large; margin-left: 15px;">Shows</p>
+        </div>
+
+        <div class="link-buttons button-class" onclick="">
+            
+            <p style="font-size: x-large; margin-left: 18px;">Explore</p>
+        </div>
+		
+		<div class="link-buttons button-class" onclick="">
+            
+            <p style="font-size: x-large; margin-left: 18px;">Saved videos</p>
+        </div>
+
+      
+	   <!----Main feed --->
+		<div class="content-area" id="mainContent">
+        <section>
+
+            <div class = "video">
+                <video width="320" height="240" autoplay>
+					<source src="Images/video.mp4" type="video/mp4">
+					
+                <p style="padding-left: 10px; margin-top: 1%; color: #FFFFFF; font-weight:400 !important; font-size:x-large;"> 
+                    I Painted the Same Painting in 1 Hour, 10 Hours and 100 Hours!
+                </p>
+              
+            </div>
+</body>
+</html>

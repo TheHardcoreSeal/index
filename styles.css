@@ -60,7 +60,7 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: larger;
+    font-size: 1.4vw;
     font-weight:bold;
     color: #fff;
     height: 2.55vw;
@@ -367,8 +367,8 @@ body {
     margin-top: 2.55vw;
     display: flex;
     flex-direction: column;
-    width: 15.8vw;
-    height: 16vw;
+    width: 17vw;
+    height: 19vw;
     background-color: #242526;
     border-radius: 0.6vw;
 }
@@ -380,6 +380,7 @@ body {
     padding: 0.2vw;
     border-bottom: 1px solid #3A3B3C;
     padding-bottom: 0.5vw;
+    margin-top: 0.5vw;
     margin-bottom: 0.5vw;
 }
 
@@ -387,8 +388,9 @@ body {
     display: flex;
     align-items: center;
     height: 2.5vw;
-    margin: 0;
+    margin: 0.2vw;
     background-color: #3A3B3C;
+    border-radius: 0.2vw;
 }
 
 .drag-panels-helper {
@@ -405,7 +407,7 @@ input[type="checkbox"] {
     border-radius: 0.2vw;
     outline: none;
     cursor: pointer;
-    margin-right: 5px;
+    margin-right: 0.4vw;
 }
 
 input[type="checkbox"]:checked {
@@ -520,11 +522,13 @@ label {
     background-color: #18191A;
 }
 
+/* CREATE POST STUFF (NEEDS TO BE FIXED) */
+
 .create-post {
     background-color: #242526;
     padding: 0.4vw;
     margin: 1vw;
-    border-radius: 0.75vw;
+    border-radius: 0.8;
     width: 80vw;
     height: 10vw;
 }
@@ -560,10 +564,10 @@ label {
 }
 
 .buttons-container span {
-    margin-left: 5px;
+    margin-left: 0.4vw;
     position: relative;
-    top: -5px;
-    font-size: 15px;
+    top: -0.4vw;
+    font-size: 1vw;
 }
 
 .buttons-container button {
@@ -571,7 +575,7 @@ label {
     color: #b2b3b4;
     cursor: pointer;
     flex-grow: 1;
-    border-radius: 10px;
+    border-radius: 0.7vw;
     border: none;
     flex: 0 0 25%;
     min-width: 0;
@@ -759,6 +763,8 @@ label {
     width: 28%;
 }
 
+/* CREATE POST STUFF (NEEDS TO BE FIXED) */
+
 .feedpost {
     margin: 0;
     display: flex;
@@ -766,12 +772,12 @@ label {
     background-color: #242526;
     margin-top: 2vh;
     width: 80vw;
-    margin-bottom: 50px;
-    border-radius: 10px;
+    margin-bottom: 4vw;
+    border-radius: 0.8vw;
 }
 
 .feedpost-name{
-    margin-left: 10px;
+    margin-left: 0.7vw;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -780,7 +786,7 @@ label {
 .post-information{
     display: flex;
     flex-direction: row;
-    padding: 10px;
+    padding: 0.75vw;
 }
 
 .post-image {

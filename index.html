@@ -415,62 +415,65 @@
     <div id="overlay" class="overlay" style="visibility: hidden;">
         <div id="sortable" class="overlay-content">
             <div id="nonSortable" class="panel-top">
-                <div class="x-background button-class" style="margin-left:0.4vw; margin-right: 40px;"
+                <div class="x-background button-class" style="margin-left:0.4vw; margin-right: 2.14vw;"
                     onclick="xPanelClick()">
                     <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
                 </div>
                 <p style="margin: 0; font-weight: 500; color:white; font-size: 1.2vw;">Panel Editor</p>
             </div>
 
-            <div id="friendsOnline" class="drag-panels" style="margin-bottom: 0.4vw;">
+            <div id="friendsOnline" class="drag-panels">
                 <label>
                     <input type="checkbox" checked>
                     <p style="margin-left:0.4vw; user-select: none;">Friends Online</p>
                 </label>
                 <i class="fa-solid fa-grip-vertical button-class"
-                    style="font-size: 1.2vw; color: white; margin-left: 10.5vw;"></i>
+                    style="font-size: 1.2vw; color: white; margin-left: 6vw;"></i>
             </div>
 
-            <div id="events" class="drag-panels" style="margin-bottom: 0.4vw;">
+            <div id="events" class="drag-panels">
                 <label>
                     <input type="checkbox" checked>
                     <p style="margin-left:0.4vw; user-select: none;">Events</p>
                 </label>
                 <i class="fa-solid fa-grip-vertical button-class"
-                    style="font-size: 1.2vw; color: white; margin-left: 180px;"></i>
+                    style="font-size: 1.2vw; color: white; margin-left: 9.6vw;"></i>
             </div>
 
-            <div id="pages" class="drag-panels" style="margin-bottom: 0.4vw;">
+            <div id="pages" class="drag-panels">
                 <label>
                     <input type="checkbox" checked>
                     <p style="margin-left:0.4vw; user-select: none;">Pages</p>
                 </label>
                 <i class="fa-solid fa-grip-vertical button-class"
-                    style="font-size: 1.2vw; color: white; margin-left: 180.4vw;"></i>
+                    style="font-size: 1.2vw; color: white; margin-left: 9.9vw;"></i>
             </div>
 
-            <div id="birthdays" class="drag-panels" style="margin-bottom: 0.4vw;">
+            <div id="birthdays" class="drag-panels">
                 <label>
                     <input type="checkbox" checked>
                     <p style="margin-left:0.4vw; user-select: none;">Birthdays</p>
                 </label>
                 <i class="fa-solid fa-grip-vertical button-class"
-                    style="font-size: 1.2vw; color: white; margin-left: 156px;"></i>
+                    style="font-size: 1.2vw; color: white; margin-left: 8.3vw;"></i>
             </div>
 
-            <div id="groupConversations" class="drag-panels" style="margin-bottom: 0.4vw;">
+            <div id="groupConversations" class="drag-panels">
                 <label>
                     <input type="checkbox" checked>
                     <p style="margin-left:0.4vw; user-select: none;">Group Conversations</p>
                 </label>
                 <i class="fa-solid fa-grip-vertical button-class"
-                    style="font-size: 1.2vw; color: white; margin-left: 62px;"></i>
+                    style="font-size: 1.2vw; color: white; margin-left: 3.1vw;"></i>
             </div>
         </div>
     </div>
 
     <!----Main feed --->
+
     <div class="content-area" id="mainContent">
+
+        <!----------------------------------------CREATE POST STUFF (NEEDS TO BE FIXED)---------------------------------------->
             <div class="create-post">
                 <i onclick="userClick()" id="profile-picture" class=" button-class fa-solid fa-circle-user"></i>
                 <div class="create-post-content">
@@ -482,27 +485,60 @@
 
                 <div class="buttons-container">
                     <button onclick="showFloatingPanel()">
-                        <i class="fa-solid fa-video" style="color: #b2b3b4; font-size: 30px"></i>
+                        <i class="fa-solid fa-video" style="color: #b2b3b4; font-size: 2vw;"></i>
                         <span style="margin-left: 0.4vw; margin-top: -1.6vw">Live Video</span>
                     </button>
 
                     <button onclick="showFloatingPanel()">
-                        <i class="fa-solid fa-circle-play" style="color: #b2b3b4; font-size: 30px"></i>
+                        <i class="fa-solid fa-circle-play" style="color: #b2b3b4; font-size: 2vw;"></i>
                         <span style="margin-left: 0.4vw;">Stories</span>
                     </button>
 
                     <input type="file" id="fileInput" accept="image/*, video/*" style="display: none;">
                     <button onclick="showFloatingPanel()">
-                        <i class="fa-solid fa-photo-film" style="color: #b2b3b4; font-size: 30px"></i>
+                        <i class="fa-solid fa-photo-film" style="color: #b2b3b4; font-size: 2vw;"></i>
                         <span style="margin-left: 0.4vw;">Photo/video</span>
                     </button>
 
                     <button onclick="showFloatingPanel()">
-                        <i class="fa-regular fa-face-smile" style="color: #b2b3b4; font-size: 30px"></i>
+                        <i class="fa-regular fa-face-smile" style="color: #b2b3b4; font-size: 2vw;"></i>
                         <span style="margin-left: 0.4vw;">Feeling/activity</span>
                     </button>
                 </div>
             </div>
+
+            <!-- Floating Create Post Panel -->
+            <div class="floating-panel" id="floatingPanel">
+                <div class="create-post-panel">
+                    <div class="panel-header">
+                        <p class="create-post-header">Create post</p>
+                        <button onclick="hideFloatingPanel()" class="close-button button-class">X</button>
+                    </div>
+                    <hr class="line-divider">
+                    <div class="content">
+                        <div class="main-page">
+                            <i id="profile-picture" class="button-class fa-solid fa-circle-user"></i>
+                            <div class="user-info">
+                                <span class="username">Username</span>
+                                <button class="dropdown-btn">
+                                    <i class="fa-solid fa-earth-americas"
+                                        style="color: #8e8e8e; font-size: 0.5vw; padding-right:0.4vw;"></i>Public<i
+                                        class="fa-solid fa-play fa-rotate-90 fa-2xs"
+                                        style="margin-left:0.4vw; font-size: xx-small; color: #8e8e8e;"></i>
+                                </button>
+                            </div>
+                            <textarea id="user-text" class="post-text"
+                                placeholder="What's on your mind, User?"></textarea>
+                            <div class="actions">
+                                <button onclick="hideFloatingPanel()" class="button-class post-btn">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dim-overlay"></div>
+
+<!----------------------------------------CREATE POST STUFF (NEEDS TO BE FIXED)---------------------------------------->
 
             <div class = "feedpost">
                 <div class = "post-information">
@@ -539,43 +575,14 @@
                     <p style="margin: 0; margin-left:0.4vw; font-size: 1.2vw;">Share</p>
                 </div>
 
-                <div class = "comments">
+                <div class = "comments"><!--Not done yet-->
                     <p style="margin:0.4vw; font-weight: bold !important; color: #B2B2B2;">View more Comments</p>
 
-                    <div> </div>
-                </div>
-            </div>
+                    <div> 
 
-            <!-- Floating Create Post Panel -->
-            <div class="floating-panel" id="floatingPanel">
-                <div class="create-post-panel">
-                    <div class="panel-header">
-                        <p class="create-post-header">Create post</p>
-                        <button onclick="hideFloatingPanel()" class="close-button button-class">X</button>
-                    </div>
-                    <hr class="line-divider">
-                    <div class="content">
-                        <div class="main-page">
-                            <i id="profile-picture" class="button-class fa-solid fa-circle-user"></i>
-                            <div class="user-info">
-                                <span class="username">Username</span>
-                                <button class="dropdown-btn">
-                                    <i class="fa-solid fa-earth-americas"
-                                        style="color: #8e8e8e; font-size: 0.5vw; padding-right:0.4vw;"></i>Public<i
-                                        class="fa-solid fa-play fa-rotate-90 fa-2xs"
-                                        style="margin-left:0.4vw; font-size: xx-small; color: #8e8e8e;"></i>
-                                </button>
-                            </div>
-                            <textarea id="user-text" class="post-text"
-                                placeholder="What's on your mind, User?"></textarea>
-                            <div class="actions">
-                                <button onclick="hideFloatingPanel()" class="button-class post-btn">Post</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div class="dim-overlay"></div>
     </div>
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

@@ -868,12 +868,26 @@ label {
     background-color: #3A3B3C;
 }
 
+
+
 .comment-blockFS{
     margin-left: 0.5vw;
     padding-right: 0.5vw;
     padding-bottom: 0.5vw;
     border-radius: 1vw;
     max-width: 40vw;
+    min-width: 5vw;
+    max-height: 10vw;
+    min-height: 3vw;
+    background-color: #3A3B3C;
+}
+
+.comment-blockFS2{
+    margin-left: 0.5vw;
+    padding-right: 0.5vw;
+    padding-bottom: 0.5vw;
+    border-radius: 1vw;
+    max-width: 35vw;
     min-width: 5vw;
     max-height: 10vw;
     min-height: 3vw;
@@ -916,6 +930,18 @@ label {
 
 .user-comment-inputFS{
     width: 40vw;
+    height: 6vw;
+    padding-left: 0.5vw;
+    background-color: #3A3B3C;
+    border-radius: 0.8vw;
+    outline: none;
+    color: #B2B2B2;
+    border-width: 0;
+}
+
+
+.user-comment-inputFS2{
+    width: 35vw;
     height: 6vw;
     padding-left: 0.5vw;
     background-color: #3A3B3C;
@@ -1119,6 +1145,13 @@ label {
     cursor: pointer;
 }
 
+#dynamic2{
+    height: calc(100vh - 2.55vw);
+    width: auto;
+    cursor: pointer;
+}
+
+
 #overlay3 {
     position: fixed;
     display: none;
@@ -1152,4 +1185,24 @@ label {
 .commentsad{
     overflow-y: auto;
     height: 25vw;
+}
+
+#leftarrow:hover #idk{
+    visibility: visible;
+}
+
+#rightarrow:hover i{
+    display: flex;
+}
+
+#testas:hover{
+    background-color: rgba(0,0,0,0.9);
+}
+
+.leftside{
+    transition: opacity 0.5s ease;
+}
+
+.leftside:hover{
+    opacity: 0.5 ;
 }

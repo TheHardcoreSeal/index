@@ -100,11 +100,31 @@ function zoom() {
     var zoomedImg = document.getElementById("zoomedImg");
     zoomedImg.src = img.src;
     overlay.style.display = "block";
+
+    zoomedImg.parentElement.parentElement.classList.remove('leftside')
+    document.getElementById("leftarrow").style.display = "none";
+    document.getElementById("rightarrow").style.display = "none";
+}
+
+function zoom2() {
+    var img = document.getElementById("dynamic2");
+    var overlay = document.getElementById("overlay3");
+    var zoomedImg = document.getElementById("zoomedImg");
+    zoomedImg.src = img.src;
+    overlay.style.display = "block";
+
+    zoomedImg.parentElement.parentElement.classList.remove('leftside')
+    document.getElementById("leftarrow").style.display = "none";
+    document.getElementById("rightarrow").style.display = "none";
+    
 }
 
 function unzoom(event) {
     if (event.target.id === 'overlay3') {
         document.getElementById("overlay3").style.display = "none";
+        zoomedImg.parentElement.parentElement.classList.add('leftside')
+        document.getElementById("leftarrow").style.display = "flex"
+        document.getElementById("rightarrow").style.display = "flex"
     }
 }
 
@@ -151,6 +171,10 @@ function xPanelClickMessenger(){
 
 function fullscreenPost(){
     window.location.href = "fullscreen.html";
+}
+
+function fullscreenPost2(){
+    window.location.href = "fullscreen2.html";
 }
 
 //add functionality for making background gray when clicked

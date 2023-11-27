@@ -63,6 +63,16 @@
 
     <!--MAIN-CONTENT----------------------------------------------------------------------------------------------------------------->
 
+    <div>
+        <div id = "leftarrow" style="width: 4vw; height:4vw; border-radius: 2vw; display: flex; align-items: center; justify-content: center;position: absolute; margin-top: 20vw; z-index: 10; margin-left: 1vw;">
+            <i id = "idk" class="fa-regular fa-circle-left button-class" style="font-size: 3vw; color: white;" onclick="fullscreenPost()"></i>
+        </div>
+
+        <div id = "rightarrow"style="width: 4vw; height:4vw; border-radius: 2vw; display: flex; align-items: center; justify-content: center;position: absolute; margin-top: 20vw; z-index: 10; margin-left: 49vw;">
+            <i class="fa-regular fa-circle-left fa-rotate-180" style="font-size: 3vw; color: #38393a;"></i>
+        </div>
+    </div>
+
     <div style="display: flex; flex-direction: row;">
         <div class = "leftside">
             <img src="Images\UID-meme.jpg" id = "dynamic">
@@ -73,9 +83,9 @@
     
         <div class = "rightside">
             <div class = "post-information">
-                <img src="Images\group c.png" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
+                <img src="Images\Theo-von.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
                 <div class = "feedpost-name" style="font-size: 1vw;">
-                    <p style="margin: 0;color: #FFFFFF; font-weight: bold;">Group C</p>
+                    <p style="margin: 0;color: #FFFFFF; font-weight: bold;">Theo Von</p>
                     <div style="display: flex; flex-direction: row;">
                         <p style="margin: 0;color: #B2B2B2 ; ">Suggested for you</p>   
                         <p style="color: #B2B2B2; margin: 0; font-weight: bold;">-November 29 at 1:47PM</p>
@@ -84,7 +94,7 @@
             </div>
 
             <p style="padding-left:0.4vw; margin-top: 1%; margin-left: 0.5vw; color: #FFFFFF; font-weight:400 !important; font-size:1.2vw;"> 
-                Nah, cause tell me why we had to code an entire social media interface in a week ;-; #relatable 
+                I actually never considered this from the babies perspective. Crazy eye opener amirite?
             </p>
 
             <div style="display: flex; flex-direction: row; border-bottom: 2px solid #3A3B3C;">
@@ -114,17 +124,19 @@
             </div>
 
             <div id = "random" class = "comments">
-                <p style="margin:0.4vw; font-weight:normal !important; color: #B2B2B2; user-select: none; display: flex;">Most Relevant</p>
-                
                 <div class = "commentsad">
+                    <div style="    display: flex; flex-direction: row;">
+                        <p style="margin:0.4vw; font-weight:normal !important; color: #B2B2B2; user-select: none; display: flex;">Most Relevant</p>
+                        <i class="fa-solid fa-caret-up fa-rotate-180" style="margin: 0; color: #B2B2B2; margin-bottom: 0.6vw;"></i>
+                    </div>
                     <div>
                         <div class = "comment"> 
-                            <img src="Images\Buddha.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
+                            <img src="Images\Caillou.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
                             <div class = "comment-blockFS">
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
-                                    in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
-                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 200 hours in the project!</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >Caillou</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I’d argue that the mother’s view 
+                                    is actually more important, because the baby is too dumb to really care anyways. You’re primarily selling to the mother, 
+                                    the spinning shit doesn’t actually help a baby whatsoever. They need human affection, rather than toys.</p>
                             </div>
                         </div>
                         <div class = "comment-information">
@@ -136,12 +148,12 @@
 
                     <div>
                         <div class = "comment"> 
-                            <img src="Images\Buddha.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
+                            <img src="Images\Nobody.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
                             <div class = "comment-blockFS">
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
-                                    in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
-                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 200 hours in the project!</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >Literally Nobody</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">Your ability to break down 
+                                    complex topics into digestible and relatable content is commendable. I particularly enjoyed this post. It opened my eyes. 
+                                    Your dedication to providing value to your audience is truly admirable. Keep it up!</p>
                             </div>
                         </div>
                         <div class = "comment-information">
@@ -153,12 +165,11 @@
 
                     <div>
                         <div class = "comment"> 
-                            <img src="Images\Buddha.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
+                            <img src="Images\Saul-goodman.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
                             <div class = "comment-blockFS">
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
-                                    in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
-                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 200 hours in the project!</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >Saul Goodman</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">OMG LOL. Imagine being this baby, 
+                                    having to stare at this all day, I could not (on a side note, this was probably me as a baby lmfao)</p>
                             </div>
                         </div>
                         <div class = "comment-information">
@@ -170,12 +181,12 @@
                     
                     <div>
                         <div class = "comment"> 
-                            <img src="Images\Buddha.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
+                            <img src="Images\Goofy.jpg" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
                             <div class = "comment-blockFS">
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >The Buddha Himself</p>
-                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">I totally get it! Coding a social media interface 
-                                    in a week is no joke. The struggle is real! It's incredible how we manage to bring together design, functionality, and user 
-                                    experience in such a short timeframe. Hope you manage to pass despite putting in over 200 hours in the project!</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; font-weight: 500;" >Goofy</p>
+                                <p style="margin: 0; margin-top: 0.3vw; margin-left: 0.6vw; color: #FFFFFF; margin-top: 0.4vw;">This is a great post that perfectly 
+                                    illustrates the example of clients vs users. Ultimately, clients should get what they pay for, but as a designer you need to 
+                                    let them know the user’s perspective, as the client isn’t savvy enough to know that all the time.</p>
                             </div>
                         </div>
                         <div class = "comment-information">
@@ -183,7 +194,9 @@
                             <p style="margin: 0; margin-right: 0.8vw; margin-left: 0.8vw; font-weight: 500;">Like</p>
                             <p style="margin: 0; font-weight: 500;">Reply</p>
                         </div>
-                    </div>    
+                    </div>   
+                    
+                    <p style="font-size: 0.9vw; font-weight: bold; color: #6a6969; margin-left: 20vw;">Show more</p>
                 </div>
 
                 <div id = "locater" class = "user-comment2" style="bottom: 0 !important; padding-top: 0.5vw;margin-left: 0.5vw; border-top: 1px solid #6f6f6f;">
@@ -196,7 +209,6 @@
                 </div>
 
             </div>
-
         </div>
     </div>
 
@@ -292,6 +304,107 @@
                 <div class = "content-buttons button-class" style="margin-left: 0.5vw;" onclick="xPanelClickContent2()">
                     <p>Reset to Default</p>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlayMessenger" class="overlay" style="visibility: hidden;">
+        <div class = "messenger-content">
+            <div class = "messenger-title">
+                <div style="display: flex; flex-direction: row; align-items:start ; justify-content: left;">
+                    <div class="x-background button-class" style="left: 0; margin-left: 0.5vw; margin-top: 0.7vw; margin-right: 1vw; " onclick="xPanelClickMessenger()">
+                        <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                    </div>
+                    <p style=" margin: 0; font-weight: bold !important; font-size: 2vw; color: white; margin-top: 0.4vw;">Chats</p>
+                </div>
+            </div>
+
+            <div class = "messenger-search" style="margin-left: 0.2vw;">
+                <form class="search-container">
+                    <input type="text" placeholder="Search Messenger" class="Searchbar" style="font-size: 0.8vw; width: 17vw;">
+                </form>
+            </div>
+
+            <div style="color: #b2b2b2; font-size: 0.8vw; display: flex; flex-direction: row; font-weight: 400; user-select: none;">
+                <p style="margin-left: 15.5vw;">Verified</p>
+                <i class="fa-solid fa-caret-up fa-rotate-180" style="margin-bottom: 1vw; margin-left: 0.2vw;"></i>
+            </div>
+
+            <div class = "people" style="margin-top: -0.5vw;">
+                <div class = "person">
+                    <img src="Images\Johnny-Depp.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                    <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                        <p style="margin: 0; font-weight: bold;">Johnny Depp</p>
+                        <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                            <p style="margin: 0;">You: luv ur stuff man. - </p>
+                            <p style="font-weight: bold; margin: 0;"> 1y</p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-circle-check" style="margin-left:0.7vw; margin-top: 0.5vw; font-size: 1.5vw;"></i>
+                </div>
+
+                <div class = "person">
+                    <img src="Images\Albert-Einstein.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                    <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                        <p style="margin: 0; font-weight: bold;">Albert Einstein</p>
+                        <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                            <p style="margin: 0;">Albert: Yo I revived wassup G! -</p>
+                            <p style="font-weight: bold; margin: 0;"> 3y</p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-circle-check" style="margin-left:0.7vw; margin-top: 0.5vw; font-size: 1.5vw;"></i>
+                </div>
+
+                <div class = "person">
+                    <img src="Images\Hugh-Jackman.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                    <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                        <p style="margin: 0; font-weight: bold;">Hugh Jackman</p>
+                        <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                            <p style="margin: 0;">You: agreed - </p>
+                            <p style="font-weight: bold; margin: 0;"> 4y</p>
+                        </div>
+                    </div>
+
+                    <i class="fa-solid fa-circle-check" style="margin-left:0.7vw; margin-top: 0.5vw; font-size: 1.5vw;"></i>
+                </div>
+
+                <div class = "person">
+                    <img src="Images\bossman.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                    <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                        <p style="margin: 0; font-weight: bold;">Bossman</p>
+                        <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                            <p style="margin: 0;">Bossman: I thought you were sic... - </p>
+                            <p style="font-weight: bold; margin: 0;"> 1h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "person">
+                    <img src="Images\billy-jean.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                    <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                        <p style="margin: 0; font-weight: bold;">Billy Jean</p>
+                        <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                            <p style="margin: 0;">Billy: I told you I'm not your lover... - </p>
+                            <p style="font-weight: bold; margin: 0;"> 3d</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "person">
+                    <img src="Images\Ratvinder-Grewal.jpg" alt="User Image" class="chat-image" style="margin-right: 0.4vw !important;">
+                    <div style="display: flex; flex-direction: column; margin-top: 0.2vw;">
+                        <p style="margin: 0; font-weight: bold;">Professor</p>
+                        <div style="display: flex; flex-direction: row; color: #B2B2B2; font-size: 0.8vw;">
+                            <p style="margin: 0;">You: please respond to my emai... -</p>
+                            <p style="font-weight: bold; margin: 0;"> 905y</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "messenger-end">
+                <p>See all in Messenger</p>
             </div>
         </div>
     </div>

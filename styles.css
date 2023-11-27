@@ -1204,7 +1204,7 @@ label {
 #dynamic{
     height: calc(100vh - 2.55vw);
     width: auto;
-    cursor: pointer;
+    user-select: none;
 }
 
 #dynamic2{

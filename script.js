@@ -165,8 +165,16 @@ function messengerClick(){
     document.getElementById('overlayMessenger').style.visibility = 'visible';
 }
 
+function notificationClick(){
+    document.getElementById('overlayNotif').style.visibility = 'visible';
+}
+
 function xPanelClickMessenger(){
     document.getElementById('overlayMessenger').style.visibility = 'hidden';
+}
+
+function xPanelClickNotif(){
+    document.getElementById('overlayNotif').style.visibility = 'hidden';
 }
 
 function fullscreenPost(){

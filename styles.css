@@ -71,6 +71,21 @@ body {
     transition: background-color 0.2s ease;
 }
 
+.center-buttons2 {
+    user-select: none;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-size: 1.4vw;
+    font-weight:bold;
+    color: #fff;
+    height: 2.55vw;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    border-radius: 0.5vw;
+    font-size: 1.2vw;
+}
+
 .center-buttons:hover {
     background-color: #434445;
 }
@@ -135,6 +150,18 @@ body {
     margin-right: 0.3vw;
     font-size: 0.9vw;
     transition: background-color 0.2s ease;
+}
+
+.icon-background-unclickable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5vw;
+    height: 2.5vw;
+    background-color: #3A3B3C;
+    border-radius: 2.5vw;
+    margin-right: 0.3vw;
+    font-size: 0.9vw;
 }
 
 .icon-background:hover {
@@ -391,6 +418,17 @@ body {
 }
 
 .overlay-content {
+    position: absolute;
+    margin-top: 2.55vw;
+    display: flex;
+    flex-direction: column;
+    width: 17vw;
+    height: 19vw;
+    background-color: #242526;
+    border-radius: 0.6vw;
+}
+
+.overlayNotif {
     position: absolute;
     margin-top: 2.55vw;
     display: flex;
@@ -1205,4 +1243,30 @@ label {
 
 .leftside:hover{
     opacity: 0.5 ;
+}
+
+.notifPanel{
+    background-color: #242526;
+    width: 20vw;
+    height: 31vw;
+    margin-top: 3vw;
+    margin-left: 79vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5vw;
+}
+
+.underbuttons{
+    user-select: none;
+    width: 2.5vw;
+    height: 2vw;
+    border-radius: 2vw;
+    background-color: #233950;
+}
+
+.underbuttons2{
+    user-select: none;
+    width: 6vw;
+    height: 2vw;
+    border-radius: 2vw;
 }

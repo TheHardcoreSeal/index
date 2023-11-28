@@ -756,7 +756,7 @@ label {
 	font-weight: 600;
 }
 
-.panel-header .close-button {
+.close-button {
     border: none;
     border-radius: 50%;
     background-color: #393a3b;
@@ -851,6 +851,49 @@ label {
     font-size: 10px;
     margin-top: 3px;
     width: 4.5vw;
+}
+
+.dropdown-btn:hover {
+	background-color: #4e4f50;
+}
+
+.back-btn {
+	margin-left: -0.8vw;
+	width: 2.3vw;
+    height: 2.3vw;
+}
+
+/*buttons*/
+.button-list {
+      list-style: none; 
+	  margin-left: -3.6vw;
+}
+
+.button-list a {
+	text-decoration: none;
+}
+
+.button-list li button {
+	width: 27vw;
+    border: none;
+    background-color: #242526;
+    cursor: pointer;
+	text-align: left;
+	padding: 1vw 0vw;
+	border-radius: 0.7vw;
+	font-weight: 600;
+	color: #FFFFFF;
+    font-size: 1.1vw;
+}
+
+.button-list li button:hover {
+	background-color: #4e4f50;
+}
+
+.audience-page p {
+	font-size: 1.1vw;
+	font-weight: 600;
+	color: #FFFFFF;
 }
 
 .feedpost {

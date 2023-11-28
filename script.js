@@ -473,3 +473,51 @@ document.querySelector('.back-btn').addEventListener('click', function() {
     audiencePage.style.display = 'none';
     mainPage.style.display = 'block';
 });
+
+// Function to create a new post
+function createPost() {
+    const userInput = document.getElementById('user-text').value.trim();
+	const feed = document.getElementById('feed');
+		
+    if (userInput !== '' && feed) {
+		
+        const newPost = document.createElement('div');
+        newPost.classList.add('feedpost');
+		
+		newPost.innerHTML = `
+			<div class = "post-information">
+					<i id="seperate-profile-picture" class=" button-class fa-solid fa-circle-user" style="margin-left: -0.3vw;"></i>
+                    <div class = "feedpost-name" style="font-size: 1vw; margin-left: 2.7vw;">
+                        <p style="margin: 0;color: #FFFFFF; font-weight: bold;">Username</p>
+                        <div style="display: flex; flex-direction: row;">
+                            <p style="color: #B2B2B2; margin: 0; font-weight: bold;">Just now</p>
+                        </div>
+                    </div>
+                </div>
+            <p style="padding-left:0.4vw; margin-top: 1%; color: #FFFFFF; font-weight:400 !important; font-size:1vw; padding-bottom: 0vw;">${userInput}</p>
+				<div class = "like-comment-share-feed" style="display: flex; flex-direction: row; border-top: 2px solid #3A3B3C; padding-top: 0.6vw; padding-bottom: 0.6vw">>
+                    <i class="fa-regular fa-thumbs-up" style="color: #727274;"></i>
+                    <p style="margin: 0; margin-left:0.4vw; font-size: 1.2vw;">Like</p>
+
+                    <i class="fa-regular fa-comment" style="margin-left: 15vw;"></i>
+                    <p style="margin: 0; margin-left:0.4vw; font-size: 1.4vw; margin-right: 15vw;">Comment</p>
+
+                    <i class="fa-regular fa-share-from-square" style="color: #727274;"></i>
+                    <p style="margin: 0; margin-left:0.4vw; font-size: 1.2vw;">Share</p>
+                </div>
+					<div id = "locater" class = "user-comment" style="margin-top: 1vw;">
+                        <i id="seperate-profile-picture" class=" button-class fa-solid fa-circle-user"></i>
+                        <div class = "user-comment-block"> 
+                            <input id = "comment" type="text" placeholder="Write a comment..." class="user-comment-input"
+                            style="margin-left: 3vw; font-size: 1vw !important;">
+                            <i id = "send-arrow" class="fa-solid fa-play fa-lg button-class" onclick="sendComment(event)"></i>
+                        </div>
+                    </div>
+        `;
+		
+        feed.insertBefore(newPost, feed.firstChild);
+
+        // Clear the text area after posting
+        document.getElementById('user-text').value = "";
+    }
+}

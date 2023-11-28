@@ -520,4 +520,5 @@ function createPost() {
         // Clear the text area after posting
         document.getElementById('user-text').value = "";
     }
+	hideFloatingPanel();
 }

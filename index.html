@@ -27,10 +27,6 @@
         </div>
 
         <div class="center-side">
-            <div class="center-buttons button-class" onclick="marketplaceClick()">
-                <i class="fa-solid fa-store fa-xl" style="color: #ffffff;"></i>
-                <p style="margin-left: 0.4vw;">Marketplace</p>
-            </div>
 
             <div class="vertical-line"></div>
 
@@ -54,26 +50,34 @@
             </div>
         </div>
 
-        <div class="right-side">
-            <div class="icon-background button-class" onclick="settingsClick()">
-                <i class="fa-solid fa-gear fa-2xl " style="color: #ffffff;"></i>
-            </div>
-
-            <div class="icon-background button-class" onclick="userClick()">
-                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+        <div class="right-side"> 
+            <div class="icon-background button-class" onclick="messengerClick()">
+                <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #ffffff;"></i>
             </div>
 
             <div class="icon-background button-class" onclick="notificationClick()">
                 <i class="fa-solid fa-bell fa-2xl" style="color: #ffffff;"></i>
             </div>
 
-            <div class="icon-background button-class" onclick="messengerClick()">
-                <i class="fa-brands fa-facebook-messenger fa-2xl" style="color: #ffffff;"></i>
+            <div class="icon-background-unclickable">
+                <i class="fa-solid fa-user fa-2xl" style="color: #525355;"></i>
+            </div>
+
+            <div class="icon-background-unclickable">
+                <i class="fa-solid fa-gear fa-2xl " style="color: #525355;"></i>
             </div>
         </div>
     </div>
 
     <!--Left Side Panel v ----------------------------------------------------------------------------------------------------->
+
+    <div  id = "secrecy" style="position: absolute; background-color: #242526; width: 3vw; height: 100vh; border-right: 2px solid #3A3B3C; visibility: hidden;">
+        <i onclick="openSide()" id = "side-col" class="fa-solid fa-caret-up fa-rotate-270 button-class" style="margin-top: 7.5vw; margin-left: 2vw; font-size: 1.5vw !important;"></i>
+    </div>
+
+    <div id ="idkanymore" style="position: absolute; margin-top: 7vw; margin-left: 16vw; z-index: 100; color: #FFFFFF;">
+        <i id = "side-col" class="fa-solid fa-caret-up fa-rotate-270 button-class" style="font-size: 1.5vw;" onclick="collapseSide()"></i>
+    </div>
 
     <div id="side1" class="leftSideBar" style="visibility: visible;">
         <div class="tab-switch fixed-child">
@@ -85,19 +89,19 @@
             </div>
         </div>
 
-        <div class="link-buttons button-class" onclick="userClick()">
-            <i class="fa-solid fa-user" style="color: #b2b2b2; padding-left: 0.4vw;"></i>
-            <p style="font-size: 1.3vw; margin-left: 0.9vw;">User</p>
+        <div class="link-buttons-unclickable">
+            <i class="fa-solid fa-user" style="color: #525355; padding-left: 0.4vw;"></i>
+            <p style="font-size: 1.3vw; margin-left: 0.9vw; color: #525355;">User</p>
         </div>
 
-        <div class="link-buttons button-class" onclick="friendsClick()">
-            <i class="fa-solid fa-user-group" style="color: #b2b2b2;"></i>
-            <p style="font-size: 1.3vw; margin-left: 0.6vw;">Friends</p>
+        <div class="link-buttons-unclickable">
+            <i class="fa-solid fa-user-group" style="color: #525355"></i>
+            <p style="font-size: 1.3vw; margin-left: 0.6vw; color: #525355;">Friends</p>
         </div>
 
-        <div class="link-buttons button-class" onclick="marketplaceClick()">
-            <i class="fa-solid fa-store" style="color: #b2b2b2;"></i>
-            <p style="font-size: 1.3vw; margin-left: 0.9vw">Marketplace</p>
+        <div class="link-buttons-unclickable">
+            <i class="fa-solid fa-store" style="color: #525355;"></i>
+            <p style="font-size: 1.3vw; margin-left: 0.4vw; color: #525355">Marketplace</p>
         </div>
 
         <div class="link-buttons button-class" onclick="videoClick()">
@@ -186,10 +190,10 @@
                 <p style="color:#0866FF;">Discovery Hub</p>
             </div>
         </div>
-        
+
         <div id="nonSortable" class="discoveryPanels button-class link-buttons" onclick="editPanelsClick()">
             <i class="fa-solid fa-pen-to-square" style=" margin-left: 0.5vw; color: #ffffff;"></i>
-            <p style="color: #FFFFFF; font-size: 1.2vw;  margin-left:0.4vw;">Edit Panels</p>
+            <p style="color: #FFFFFF; font-size: 1.2vw;  margin-left:0.4vw; white-space: nowrap; ">Edit Panels</p>
         </div>
 
         <div id="friendsOnline" class="discoveryPanels">
@@ -471,10 +475,8 @@
     <!----Main feed --->
 
     <div class="content-area" id="mainContent">
-
-        <!----------------------------------------CREATE POST STUFF (NEEDS TO BE FIXED)---------------------------------------->
-            <div class="create-post">
-                <i onclick="userClick()" id="profile-picture" class=" button-class fa-solid fa-circle-user"></i>
+            <div class="create-post" id = "1234">
+                <i id="profile-picture" class=" button-class fa-solid fa-circle-user" style="margin-top: 0.3vw;"></i>
                 <div class="create-post-content">
                     <button id="postContent" class="text-area-button" onclick="showFloatingPanel()"
                         placeholder="What's on your mind, User?" aria-label="Write a post">What's on your mind,
@@ -509,19 +511,31 @@
             <!-- Floating Create Post Panel -->
             <div class="floating-panel" id="floatingPanel">
                 <div class="create-post-panel">
-                    <div class="panel-header">
-                        <p class="create-post-header">Create post</p>
-                        <button onclick="hideFloatingPanel()" class="close-button button-class">X</button>
-                    </div>
-                    <hr class="line-divider">
-                    <div class="content">
+						<div class="audience-page">
+							<div class="panel-header">
+								<button class="back-btn close-button button-class">&larr;</button>
+								<p class="create-post-header" style="font-size: 1.3vw;">Post Audience</p>
+							</div>
+							<hr class="line-divider">
+							<p>Who can see your post?</p>
+							<ul class="button-list" style="padding-left: 2.8vw;">
+								<li><a href="#" data-audience="Public"><button><i class="fa-solid fa-earth-americas" style="color: #ffffff; margin-left: 0.5vw;"></i> Public</button></a></li>
+								<li><a href="#" data-audience="Friends"><button><i class="fa-solid fa-user-group" style="color: #ffffff; margin-left: 0.5vw;"></i> Friends </button></a></li>
+								<li><a href="#" data-audience="Only Me"><button><i class="fa-solid fa-lock" style="color: #ffffff; margin-left: 0.5vw;"></i> Only Me</button></a></li>
+							</ul>
+						</div>
                         <div class="main-page">
+							<div class="panel-header">
+                                <button onclick="hideFloatingPanel()" class="close-button button-class" style="margin-left: -0.7vw;">X</button>
+								<p class="create-post-header">Create post</p>
+							</div>
+							<hr class="line-divider">
+							<div class="content">
                             <i id="profile-picture" class="button-class fa-solid fa-circle-user"></i>
                             <div class="user-info">
                                 <span class="username">Username</span>
                                 <button class="dropdown-btn">
-                                    <i class="fa-solid fa-earth-americas"
-                                        style="color: #8e8e8e; font-size: 0.5vw; padding-right:0.4vw;"></i>Public<i
+                                    Public<i
                                         class="fa-solid fa-play fa-rotate-90 fa-2xs"
                                         style="margin-left:0.4vw; font-size: xx-small; color: #8e8e8e;"></i>
                                 </button>
@@ -537,13 +551,12 @@
             </div>
             <div class="dim-overlay"></div>
 
-<!----------------------------------------CREATE POST STUFF (NEEDS TO BE FIXED)---------------------------------------->
-
-            <div class = "filter-content" onclick="filterContent()">
+            <div class = "filter-content" id = "abcdabc" onclick="filterContent()">
                 <p style="margin: 0; padding: 0;">Filter Content</p>
                 <i class="fa-solid fa-filter" style="margin-left: 0.5vw; margin-top: 0.2vw;"></i>
             </div>
-
+	    
+	<div class="feed" id="feed">
             <div class = "feedpost" id = "reference">
                 <div class = "post-information">
                     <img src="Images\group c.png" alt="Profile Picture" style="width: 2.6vw; height: 2.6vw; border-radius: 5vw;">
@@ -558,8 +571,8 @@
                 <p style="padding-left:0.4vw; margin-top: 1%; color: #FFFFFF; font-weight:400 !important; font-size:1vw;"> 
                     Nah, cause tell me why we had to code an entire social media interface in a week ;-; #relatable 
                 </p>
-                <div class = "post-image" onclick="fullscreenPost()">
-                    <img src="Images\test.png" alt="Description of the image">
+                <div class = "post-image button-class">
+                    <img src="Images\test.png" onclick="fullscreenPost()">
                 </div>
                 <div style="display: flex; flex-direction: row; border-bottom: 2px solid #3A3B3C;">
                     <div style="margin: 0.5vw; display: flex; flex-direction: column; padding-bottom: 0.4vw;">
@@ -599,7 +612,7 @@
                     </div>
 
                     <div id = "locater" class = "user-comment">
-                        <i onclick="userClick()" id = "seperate-profile-picture" class="button-class fa-solid fa-circle-user"></i>
+                        <i id = "seperate-profile-picture" class="button-class fa-solid fa-circle-user"></i>
                         <div class = "user-comment-block"> 
                             <input id = "comment" type="text" placeholder="Write a comment..." class="user-comment-input"
                             style="margin-left: 3vw; font-size: 1vw !important;">
@@ -624,8 +637,8 @@
                 <p style="padding-left:0.4vw; margin-top: 1%; color: #FFFFFF; font-weight:400 !important; font-size:1vw;"> 
                     Nah, cause tell me why we had to code an entire social media interface in a week ;-; #relatable 
                 </p>
-                <div class = "post-image" onclick="fullscreenPost()">
-                    <img src="Images\test.png" alt="Description of the image">
+                <div class = "post-image button-class">
+                    <img src="Images\test.png" onclick="fullscreenPost()">
                 </div>
                 <div style="display: flex; flex-direction: row; border-bottom: 2px solid #3A3B3C;">
                     <div style="margin: 0.5vw; display: flex; flex-direction: column; padding-bottom: 0.4vw;">
@@ -665,11 +678,109 @@
                     </div>
 
                     <div id = "locater" class = "user-comment">
-                        <i onclick="userClick()" id="seperate-profile-picture" class=" button-class fa-solid fa-circle-user"></i>
+                        <i id="seperate-profile-picture" class=" button-class fa-solid fa-circle-user"></i>
                         <div class = "user-comment-block"> 
                             <input id = "comment" type="text" placeholder="Write a comment..." class="user-comment-input"
                             style="margin-left: 3vw; font-size: 1vw !important;">
                             <i id = "send-arrow" class="fa-solid fa-play fa-lg button-class" onclick="sendComment(event)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+            <!--OVERLAY STUFF------------------------------------------------------------------------------------------->
+
+
+            
+
+            <div id="overlayNotif" class="overlay" style="visibility: hidden;">
+                <div class = "notifPanel">
+                    <div class = "messenger-title">
+                        <div style="display: flex; flex-direction: row; align-items:start ; justify-content: left;">
+                            <div class="x-background button-class" style="left: 0; margin-left: 0.5vw; margin-top: 0.5vw; margin-right: 1vw; " onclick="xPanelClickNotif()">
+                                <i class="fa-solid fa-xmark fa-xl" style="color: #ffffff;"></i>
+                            </div>
+                            <p style=" margin: 0; font-weight: bold !important; font-size: 1.5vw; color: white; margin-top: 0.4vw;">Notifications</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: row; margin-top: -0.5vw;">
+                        <div class = "underbuttons" style="margin-left: 1vw; display: flex; align-items: center; justify-content: center;">
+                            <p style="margin: 0; color: #5489c2; font-weight: bold;">All</p>
+                        </div>
+    
+                        <div class = "underbuttons2" style="margin-left: 0.3vw; display: flex; align-items: center; justify-content: center;">
+                            <p style="margin: 0; color: white; font-weight: bold;">Unread</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: row;">
+                        <p style="margin: 0; margin-left: 1vw; font-size: 1vw; margin-top: 0.5vw; margin-bottom: 0.5vw; color: white; font-weight: bold;">New</p>
+                        <p style="margin: 0; margin-left: 12.5vw; font-size: 0.8vw; margin-top: 0.5vw; margin-bottom: 0.5vw; color: #727274; user-select: none;">See More</p>
+                    </div>
+
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Tommy.webp" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Tommy Accepted your friend request</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Chuckie.webp" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Chuckie sent you a friend request</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Phil.jpg" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Phil invited you to follow Lil</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Angelica.webp" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Angelica commented on your page</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p style="margin: 0; margin-left: 1vw; font-size: 1vw; margin-top: 0.5vw; margin-bottom: 0.5vw; color: white; font-weight: bold;">Earlier</p>
+                
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Susie.webp" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Susie liked your comment</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Dil.webp" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Dil shared your post</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="friends" style="color:white; margin-left: 1vw !important;">
+                        <img src="Images\Kimi.webp" alt="User Image" class="user-image" style="margin-right: 0.4vw !important;height: 2.3vw; width: 2.3vw;">
+                        <div class="page-text">
+                            <div style="display: flex; flex-direction: row;">
+                                <p style="font-size: 0.9vw; margin: 0; margin-bottom: 1vw; font-weight: bold;">Kimi accepted your friend request</p>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -8,7 +8,7 @@ This project is a redesign of the Facebook interface. The scope of this project 
 3. [Assets Used](#assets-used)
 
 ## How to Run
-To run this website for yourself, simply visit [https://dylanjtodd.github.io/](https://dylanjtodd.github.io/). This will allow you to access the latest version of our code. Alternatively, you can download this project and run the `index.html` file in an IDE such as VSCode to get the same version.
+To run this website for yourself, simply visit [https://thehardcoreseal.github.io/](https://thehardcoreseal.github.io/). This will allow you to access the latest version of our code. Alternatively, you can download this project and run the `index.html` file in an IDE such as VSCode to get the same version.
 
 
 ## Usage
